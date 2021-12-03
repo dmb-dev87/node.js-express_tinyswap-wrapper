@@ -55,7 +55,7 @@ is_opted_in().then(data => {
     else { console.log(user_address + " is opted in") }
 })
 
-async function golInfo(paddress) {
+async function getPoolInfo(paddress) {
     try {
         let account_info = await algodClient.accountInformation(paddress).do();
         console.log(account_info);
@@ -100,15 +100,13 @@ async function prepare_swap_transactions() {
 
     let noAlgo = false;
 
-    let appCallAssetArray = []
+    let appCallAssetArray = [asset_id, liquidity_asset_id];
 
-    if (asset_id === 0 || asset_id2 === 0) {
-        appCallAssetArray = [asset_id, liquidity_asset_id];
-    }
-    else {
+    if (asset_id !== 0 && asset_id2 !== 0) {
         noAlgo = true;
         appCallAssetArray = [asset_id, asset_id2, liquidity_asset_id]
     }
+    else appCallAssetArray = (asset_id === 0)?[asset_id2, liquidity_asset_id]:[asset_id, liquidity_asset_id]
 
     let txns = [
         algosdk.makePaymentTxnWithSuggestedParams(
@@ -126,7 +124,7 @@ async function prepare_swap_transactions() {
             app_args = [toUintArray('swap'), toUintArray('fi')],
             [user_address],
             undefined,
-            [asset_id, liquidity_asset_id],
+            appCallAssetArray,
         ),
         (!inputIsAlgo) ? algosdk.makeAssetTransferTxnWithSuggestedParams(
             user_address,
@@ -292,13 +290,14 @@ function handleChange() {
 
     document.getElementById("slipview").innerText = slipPercent
 
-    liquidity_asset_id = parseInt(document.getElementById("liquidAsset").value);
-
     if (asset_id === 0) { inputIsAlgo = true }
     else { inputIsAlgo = false }
 
+    getZeros(asset_id, true);
+    getZeros(asset_id2, false);
+
     getPoolInfo(pool).then(data => {
-        let end = (inputIsAlgo) ? asset_name : " Algos";
+        let end = inputIsAlgo? asset_name : " Algos";
         document.getElementById("quote").innerText = "Quote: You will receive approx: " + ((data / zerosOut) * (1 - slippage)).toFixed(2) + " " + end;
     })
 
@@ -308,6 +307,7 @@ async function getPoolInfo(paddress) {
     try {
         let account_info = await algodClient.accountInformation(paddress).do();
         console.log(account_info);
+        liquidity_asset_id = account_info["created-assets"][0].index
         let app_state = account_info['apps-local-state'][0]['key-value']
         console.log(app_state)
 
