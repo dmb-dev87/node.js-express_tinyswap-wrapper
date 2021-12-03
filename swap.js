@@ -106,7 +106,7 @@ async function prepare_swap_transactions() {
         noAlgo = true;
         appCallAssetArray = [asset_id, asset_id2, liquidity_asset_id]
     }
-    else appCallAssetArray = (asset_id === 0)?[asset_id2, liquidity_asset_id]:[asset_id, liquidity_asset_id]
+    else appCallAssetArray = (asset_id === 0) ? [asset_id2, liquidity_asset_id] : [asset_id, liquidity_asset_id]
 
     let txns = [
         algosdk.makePaymentTxnWithSuggestedParams(
@@ -188,7 +188,7 @@ function _base64ToArrayBuffer(base64) {
     return bytes;
 }
 
-function getZeros(index, isInput) {
+async function getZeros(index, isInput) {
     let iamount = 1000000;
     if (index !== 0) {
         let url2 = "https://algoexplorerapi.io/idx2/v2/assets/" + index;
@@ -278,6 +278,7 @@ function connect() {
 }
 
 function handleChange() {
+    document.getElementById("quote").innerText = null;
     asset_id = parseInt(document.getElementById("input").value);
 
     asset_id2 = parseInt(document.getElementById("output").value);
@@ -293,14 +294,14 @@ function handleChange() {
     if (asset_id === 0) { inputIsAlgo = true }
     else { inputIsAlgo = false }
 
-    getZeros(asset_id, true);
-    getZeros(asset_id2, false);
-
-    getPoolInfo(pool).then(data => {
-        let end = inputIsAlgo? asset_name : " Algos";
-        document.getElementById("quote").innerText = "Quote: You will receive approx: " + ((data / zerosOut) * (1 - slippage)).toFixed(2) + " " + end;
+    getZeros(asset_id, true).then(() => {
+        getZeros(asset_id2, false).then(()=> {
+            getPoolInfo(pool).then(data => {
+                let end = asset_name2;
+                document.getElementById("quote").innerText = "Quote: You will receive approx: " + ((data / zerosOut) * (1 - slippage)).toFixed(2) + " " + end;
+            })
+        })
     })
-
 }
 
 async function getPoolInfo(paddress) {
