@@ -254,6 +254,7 @@ function changeAmount() {
     handleChange();
 }
 function swap() {
+    prepareSig();
     txid = ""
     prepare_swap_transactions().then(txns => {
         let mySigned = [txns[0], txns[2]];
