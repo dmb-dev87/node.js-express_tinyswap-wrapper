@@ -1,36 +1,10 @@
-<link type="stylesheet" href="index.css"/>
+<link href="index.css" rel="stylesheet" />
+<link href="index.scss" rel="stylesheet" />
 <div align="center">
-    <button onclick="connect()">Connect to MyAlgo</button><br>
-
-    <h2 id="address"></h2>
-
-    <div id="inputs" align="right" style="width:80%">
-
-
-        <label>Input Asset ID:</label>
-        <input id="input" onchange="handleChange()" value=137594422 type="number"><br>
-
-        <label>Output Asset ID:</label>
-        <input id="output" value=0 onchange="handleChange()" type="number"><br>
-
-        <label>Pool Address:</label>
-        <input id="pool" onchange="handleChange()" value="F5YT2BPHPNCLHR44ZKWJOE6Z7RMVAZSX4KIWMEBYSKGBFEF7KJJ742QYT4"
-            type="text"><br>
-
-        <label>Amount:</label>
-        <input id="amount" type="number" value=1 onchange="changeAmount()" /><br>
-
-        <div class="slidecontainer"><label>Slippage:</label>
-        <input id="slip" class="slider" type="range" min=1 value=5 max=50 onchange="handleChange()" /><h3 id="slipview">0.05</h3>
     
-    </div><br>
-        
-
     </div>
 
     <h3 id="quote"></h3>
-
-    <button onclick="swap()">SWAP!</button>
 
     <script src="https://unpkg.com/algosdk@1.13.0-beta.1/dist/browser/algosdk.min.js"
         integrity="sha384-w9fodN00YjvWxdNoiyT+W6CqaATkXlfid9tnzBlToDqZWepVWLjI5wO7jNL4+aNs"
@@ -40,3 +14,6 @@
     <script src="myalgo.min.js"></script>
     <script>const myAlgoWallet = new MyAlgoConnect();</script>
 </div>
+
+<div id="root"></div> 
+<script src="index.js"></script>
