@@ -798,10 +798,6 @@ label {
     opacity: 20%
   }
   
-  .fs-5 {
-    font-style: italic
-  }
-  
   h5.algoswap-btn {
     color: #4550e6;
     margin-bottom: 0!important
@@ -1572,10 +1568,6 @@ label {
     opacity: 20%
   }
   
-  .fs-5 {
-    font-style: italic
-  }
-  
   h5.algoswap-btn {
     color: #4550e6;
     margin-bottom: 0!important
@@ -2304,9 +2296,6 @@ label {
     opacity: 20%
   }
   
-  .fs-5 {
-    font-style: italic
-  }
   
   h5.algoswap-btn {
     color: #4550e6;
@@ -2498,10 +2487,7 @@ label {
     margin-left: 3px;
     margin-right: 3px
   }
-  
-  .fs-5 {
-    font-size: 1.5rem!important
-  }
+
   
   .text-decoration-none {
     text-decoration: none!important
@@ -3017,10 +3003,7 @@ label {
   path.ap-sm {
     opacity: 20%
   }
-  
-  .fs-5 {
-    font-style: italic
-  }
+
   
   h5.algoswap-btn {
     color: #4550e6;
@@ -3720,7 +3703,7 @@ label {
   }
   
   .fs-5 {
-    font-style: italic
+    font-style: normal
   }
   
   h5.algoswap-btn {
@@ -4420,9 +4403,6 @@ label {
     opacity: 20%
   }
   
-  .fs-5 {
-    font-style: italic
-  }
   
   h5.algoswap-btn {
     color: #4550e6;
