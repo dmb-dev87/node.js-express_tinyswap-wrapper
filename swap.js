@@ -284,11 +284,11 @@ async function connect2() {
 
 function handleChange() {
     document.getElementById("quote").innerText = null;
-    asset_id = parseInt(document.getElementById("input").value);
+    //asset_id = parseInt(document.getElementById("input").value);
 
-    asset_id2 = parseInt(document.getElementById("output").value);
+    //asset_id2 = parseInt(document.getElementById("output").value);
 
-    pool = document.getElementById("pool").value;
+    //pool = document.getElementById("pool").value;
 
     let slipPercent = document.getElementById("slip").value / 100
 
