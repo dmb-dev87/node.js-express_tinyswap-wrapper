@@ -13,15 +13,15 @@ const MAINNET_VALIDATOR_APP_ID = 350338509
 
 const validator_app_id = MAINNET_VALIDATOR_APP_ID;
 
-var liquidity_asset_id = 359370898
+var liquidity_asset_id = 350338509
 
-var asset_id = 137594422;
+var asset_id = 0;
 
-var asset_id2 = 0;
+var asset_id2 = 31566704;
 
 var user_address = "C5E5W3BERJALL2ZH4YB3TAP7ZSJH2PJUPDHLGF74YE6DBMQ62AA47IXGNQ"
 
-var pool = "F5YT2BPHPNCLHR44ZKWJOE6Z7RMVAZSX4KIWMEBYSKGBFEF7KJJ742QYT4"
+var pool = "W3RTY34WM3WNAPESJX3NCHX6KP32O6V2RI5WNB3RBKKZE3RQAXYTLNUWCI"
 
 var zerosIN = 1000000;
 var zerosOut = 1000000;
@@ -264,8 +264,9 @@ function swap() {
             console.log(txns)
             try {
                 algodClient.sendRawTransaction(txns).do().then(response => {
-                    document.getElementById("sendscreen").style.display = "none";
+                    document.getElementById("sendscreen").style.display = "block";
                     document.getElementById("algoflex3").style.display = "block";
+                    document.getElementById("tablevis").style.display = "none";
                     document.getElementById("algolink").href = "https://algoexplorer.io/tx/" + response.txId
                 })
             }

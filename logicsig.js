@@ -70,4 +70,4 @@ function get_pool_logicsig(validator_app_id, asset1_id, asset2_id) {
 }
 
 
-//get_pool_logicsig(350338509,0,137594422)
+//get_pool_logicsig(350338509,0,31566704)
