@@ -4,24 +4,24 @@ var slippage = 0.05
 
 var lsig = undefined;
 
-var asset_name = "HDL"
+var asset_name = ""
 
-var asset_name2 = "Algo"
+var asset_name2 = ""
 
 const TESTNET_VALIDATOR_APP_ID = 21580889
 const MAINNET_VALIDATOR_APP_ID = 350338509
 
 const validator_app_id = MAINNET_VALIDATOR_APP_ID;
 
-var liquidity_asset_id = 350338509
+var liquidity_asset_id = window.swapDetails.liquidityassetid || 359370898
 
-var asset_id = 0;
+var asset_id = window.swapDetails.assetid || 137594422;
 
-var asset_id2 = 31566704;
+var asset_id2 = window.swapDetails.assetid2 || 0;
 
 var user_address = "C5E5W3BERJALL2ZH4YB3TAP7ZSJH2PJUPDHLGF74YE6DBMQ62AA47IXGNQ"
 
-var pool = "W3RTY34WM3WNAPESJX3NCHX6KP32O6V2RI5WNB3RBKKZE3RQAXYTLNUWCI"
+var pool = window.swapDetails.pool || "F5YT2BPHPNCLHR44ZKWJOE6Z7RMVAZSX4KIWMEBYSKGBFEF7KJJ742QYT4"
 
 var zerosIN = 1000000;
 var zerosOut = 1000000;
