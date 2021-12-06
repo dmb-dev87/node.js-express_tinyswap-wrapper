@@ -269,7 +269,7 @@ function swap() {
         });
     })
 }
-function connect() {
+function connect2() {
     myAlgoWallet.connect().then(data => {
         user_address = data[0].address
         document.getElementById("address").innerText = user_address

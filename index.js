@@ -9,7 +9,7 @@ const screen2 = '<div class="modal-backdrop fade show"></div><div class="modal-d
 
 var indexerURL = "https://algoexplorerapi.io/idx2/v2/accounts/";
 
-if (window.details !== undefined) {
+/* if (window.details !== undefined) {
   var index = parseInt(window.details.index);
   var amount = window.details.amount;
   var note = window.details.note;
@@ -27,6 +27,8 @@ if (window.details !== undefined) {
   var note = window.details.note;
   var recipient = "K3NSXYMHPRCK7PMYT3QUQXUGPZJ4MKWJXW2HJRYPVMQUMKJAOJEIEO4HK4"; // Default address is set to HDL seed address. Please update recipient to your address before deploying.//
 }
+
+*/
 
 const state = {
   update: false,
@@ -81,39 +83,6 @@ function updateBalance() {
     });
 }
 
-var iamount = 1000000
-
-function getZeros() {
-  if (index !== 0) {
-    let url2 = "https://algoexplorerapi.io/idx2/v2/assets/" + index;
-    console.log(url2);
-    fetch(url2)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        let zeros = data.asset.params.decimals;
-        let value = "1";
-        for (var i = 0; i < zeros; i++) {
-          value = value + "0";
-        }
-        iamount =  parseInt(value);
-        if (window.details.input === true) { amount = amount * iamount }
-        Object.assign(state, { stateAmount: amount / iamount });
-        Object.assign(state, { assetName: data.asset.params["unit-name"] });
-        document.getElementById("snoopy2").innerText = "" + (state.stateAmount) + " " + state.assetName;
-
-      })
-      .catch(function () {
-        console.log("Error occured  " + url2);
-      });
-  } else {
-    if (window.details.input === true) { amount = amount * 1000000 }
-    Object.assign(state, { stateAmount: amount / 1000000 });
-    document.getElementById("snoopy2").innerText = "" + (state.stateAmount) + " " + state.assetName;
-
-  }
-}
-
 function convertInput() {
   if (index !== 0) {
         if (window.details.input === true) { amount = amount * iamount }
@@ -137,7 +106,8 @@ function close() {
   document.getElementById("sendscreen").style.display = "none";
 }
 
-function connect() {
+async function connect() {
+    await connect2();
     document.getElementById("sure").style.display = "none";
     document.getElementById("shhh").style.display = "none";
     document.getElementById("tablevis").style.display = "block";
@@ -184,12 +154,11 @@ document.getElementById("div-close").onclick = close;
 document.getElementById("div-close-2").onclick = close;
 document.getElementById("div-close-3").onclick = close;
 document.getElementById("algobutton").onclick = connect;
-document.getElementById("algosend").onclick = send;
 
-if (window.details.input !== false) {
+/*if (window.details.input !== false) {
   document.getElementById("inputAmount").innerHTML = '<input id="amountInputter" class="form-control" type="number" value="0"/>'
   document.getElementById("amountInputter").onchange = inputChanged
-}
+}*/
 
 function inputChanged() {
   amount = document.getElementById("amountInputter").value;
@@ -206,4 +175,4 @@ function showDate() {
 
 showDate();
 
-if (window.details.input === true) {document.getElementById ("inputAmount").style.display = "block"}
+//if (window.details.input === true) {document.getElementById ("inputAmount").style.display = "block"}
