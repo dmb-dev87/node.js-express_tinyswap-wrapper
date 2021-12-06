@@ -264,8 +264,9 @@ function swap() {
             console.log(txns)
             try {
                 algodClient.sendRawTransaction(txns).do().then(response => {
-                    document.getElementById("sendscreen").style.display = "none";
+                    document.getElementById("sendscreen").style.display = "block";
                     document.getElementById("algoflex3").style.display = "block";
+                    document.getElementById("tablevis").style.display = "none";
                     document.getElementById("algolink").href = "https://algoexplorer.io/tx/" + response.txId
                 })
             }
