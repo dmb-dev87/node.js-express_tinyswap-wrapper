@@ -263,7 +263,7 @@ function swap() {
             txns[3] = algosdk.signLogicSigTransaction(txns[3], lsig).blob
             console.log(txns)
             try {
-                algodClient.sendRawTransaction(txns).do().then(response => { console.log(response) })
+                algodClient.sendRawTransaction(txns).do().then(response => {  document.getElementById("algolink").href = "https://algoexplorer.io/tx/" + response.txId})
             }
             catch (error) { console.log(error) }
         });
