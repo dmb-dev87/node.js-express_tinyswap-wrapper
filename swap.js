@@ -6,7 +6,7 @@ var lsig = undefined;
 
 var asset_name = "HDL"
 
-var asset_name2 = "Algorand"
+var asset_name2 = "Algo"
 
 const TESTNET_VALIDATOR_APP_ID = 21580889
 const MAINNET_VALIDATOR_APP_ID = 350338509
@@ -217,11 +217,11 @@ async function getZeros(index, isInput) {
             });
     } else {
         if (isInput) {
-            asset_name = "Algorand";
+            asset_name = "Algo";
             zerosIN = 1000000;
         }
         else {
-            asset_name2 = "Algorand";
+            asset_name2 = "Algo";
             zerosOut = 1000000;
         }
     }
@@ -269,10 +269,10 @@ function swap() {
         });
     })
 }
-function connect2() {
+async function connect2() {
     myAlgoWallet.connect().then(data => {
         user_address = data[0].address
-        document.getElementById("address").innerText = user_address
+        document.getElementById("snoopy").innerText = user_address
     })
     //const addresses = accounts.map(account => account.address);
 }
@@ -298,7 +298,7 @@ function handleChange() {
         getZeros(asset_id2, false).then(()=> {
             getPoolInfo(pool).then(data => {
                 let end = asset_name2;
-                document.getElementById("quote").innerText = "Quote: You will receive approx: " + ((data / zerosOut) * (1 - slippage)).toFixed(2) + " " + end;
+                document.getElementById("quote").innerText = " " + ((data / zerosOut) * (1 - slippage)).toFixed(2) + " " + end;
             })
         })
     })
