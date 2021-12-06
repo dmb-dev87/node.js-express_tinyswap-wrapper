@@ -7,5 +7,18 @@
     "scripts": {
         "test": "node swap.js",
         "start": "serve ."
-    }
+    },
+    "name": "algoswap",
+    "homepage": ".",
+    "version": "1.0.0",
+    "description": "Algo Swap Widget",
+    "main": "index.html",
+    "keywords": [
+        "javascript",
+        "starter",
+        "Algorand",
+        "Widget",
+        "Payment",
+        "Donations"
+      ]
 }
