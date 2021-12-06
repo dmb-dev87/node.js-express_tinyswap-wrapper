@@ -263,7 +263,11 @@ function swap() {
             txns[3] = algosdk.signLogicSigTransaction(txns[3], lsig).blob
             console.log(txns)
             try {
-                algodClient.sendRawTransaction(txns).do().then(response => {  document.getElementById("algolink").href = "https://algoexplorer.io/tx/" + response.txId})
+                algodClient.sendRawTransaction(txns).do().then(response => {
+                    document.getElementById("sendscreen").style.display = "none";
+                    document.getElementById("algoflex3").style.display = "block";
+                    document.getElementById("algolink").href = "https://algoexplorer.io/tx/" + response.txId
+                })
             }
             catch (error) { console.log(error) }
         });
@@ -295,7 +299,7 @@ function handleChange() {
     else { inputIsAlgo = false }
 
     getZeros(asset_id, true).then(() => {
-        getZeros(asset_id2, false).then(()=> {
+        getZeros(asset_id2, false).then(() => {
             getPoolInfo(pool).then(data => {
                 let end = asset_name2;
                 document.getElementById("quote").innerText = " " + ((data / zerosOut) * (1 - slippage)).toFixed(2) + " " + end;
