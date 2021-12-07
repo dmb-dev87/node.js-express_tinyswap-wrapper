@@ -1,5 +1,10 @@
 //import algosdk from 'algosdk'; //uncomment for testing in command line
 
+window.swapDetails = {assetid: 137594422,
+assetid2: 0,
+pool: "F5YT2BPHPNCLHR44ZKWJOE6Z7RMVAZSX4KIWMEBYSKGBFEF7KJJ742QYT4"
+}
+
 var slippage = 0.05
 
 var lsig = undefined;
@@ -13,7 +18,7 @@ const MAINNET_VALIDATOR_APP_ID = 350338509
 
 const validator_app_id = MAINNET_VALIDATOR_APP_ID;
 
-var liquidity_asset_id = window.swapDetails.liquidityassetid || 359370898
+var liquidity_asset_id = 359370898
 
 var asset_id = window.swapDetails.assetid || 137594422;
 
@@ -206,10 +211,12 @@ async function getZeros(index, isInput) {
                 if (isInput) {
                     asset_name = data.asset.params["unit-name"];
                     zerosIN = iamount;
+                    document.getElementById ("input-readonly").innerText = asset_id + " " + asset_name
                 }
                 else {
                     asset_name2 = data.asset.params["unit-name"]
                     zerosOut = iamount;
+                    document.getElementById ("output-readonly").innerText = asset_id2 + " " + asset_name2
                 }
             })
             .catch(function () {
@@ -219,10 +226,12 @@ async function getZeros(index, isInput) {
         if (isInput) {
             asset_name = "Algo";
             zerosIN = 1000000;
+            document.getElementById ("input-readonly").innerText = asset_id + " " + "Algo"
         }
         else {
             asset_name2 = "Algo";
             zerosOut = 1000000;
+            document.getElementById ("output-readonly").innerText = asset_id2 + " " + "Algo"
         }
     }
 }
@@ -340,3 +349,5 @@ async function getPoolInfo(paddress) {
         console.log(error);
     }
 }
+
+document.getElementById ("pool-readonly").innerText = pool

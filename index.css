@@ -91,7 +91,7 @@
   margin-bottom: 0.5rem;
 }
 
-p#slipview {
+p#slipview,p#input-readonly,p#output-readonly,p#pool-readonly {
   margin-bottom: 0px !important;
 }
 
@@ -313,11 +313,19 @@ label {
         display: none
     }
   }
+
+  p#quote {
+    margin: 0px;
+}
   
   p#snoopy {
     margin-bottom: 0!important;
-    overflow-wrap: anywhere
-  }
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+    text-overflow: ellipsis;
+    width: calc(100% - 100px);
+}
   
   button#div-close-2 {
     display: none !important;
