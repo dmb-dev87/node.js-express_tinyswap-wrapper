@@ -328,6 +328,7 @@ async function getPoolInfo(paddress) {
     try {
         let account_info = await algodClient.accountInformation(paddress).do();
         console.log(account_info);
+        liquidity_asset_id = account_info["created-assets"][0].index
         let app_state = account_info['apps-local-state'][0]['key-value']
         console.log(app_state)
 
