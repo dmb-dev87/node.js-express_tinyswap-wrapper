@@ -7,7 +7,7 @@
   },
   "name": "algoswap",
   "homepage": "./",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Algo Swap Widget",
   "main": "index.html",
   "keywords": [
@@ -32,6 +32,6 @@
   "scripts": {
     "start": "parcel index.html --open",
     "build": "parcel build --no-content-hash index.html",
-    "start-test": "serve ."
+    "start-test": "serve ./swapperlivetest.html"
   }
 }
