@@ -264,12 +264,10 @@ function get_pool_logicsig(validator_app_id, asset1_id, asset2_id) {
 
 const myAlgoWallet = new MyAlgoConnect();
 
-window.swapDetails = {assetid: 137594422,
+/*window.swapDetails = {assetid: 137594422,
 assetid2: 0,
 pool: "F5YT2BPHPNCLHR44ZKWJOE6Z7RMVAZSX4KIWMEBYSKGBFEF7KJJ742QYT4"
-}
-
-
+}*/
 
 var slippage = 0.05
 
