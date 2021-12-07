@@ -1,12 +1,13 @@
 {
   "dependencies": {
+    "@randlabs/myalgo-connect": "^1.1.1",
     "algosdk": "^1.12.0",
     "parcel-bundler": "^1.6.1",
     "serve": "^13.0.2"
   },
   "name": "algoswap",
   "homepage": "./",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Algo Swap Widget",
   "main": "index.html",
   "keywords": [

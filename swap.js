@@ -1,9 +1,17 @@
-//import algosdk from 'algosdk'; //uncomment for testing in command line
+import algosdk from 'algosdk';
+import "./logicsig.js"
+import MyAlgoConnect from '@randlabs/myalgo-connect';
+import 'regenerator-runtime/runtime'
+
+
+const myAlgoWallet = new MyAlgoConnect();
 
 window.swapDetails = {assetid: 137594422,
 assetid2: 0,
 pool: "F5YT2BPHPNCLHR44ZKWJOE6Z7RMVAZSX4KIWMEBYSKGBFEF7KJJ742QYT4"
 }
+
+
 
 var slippage = 0.05
 
@@ -212,13 +220,13 @@ async function getZeros(index, isInput) {
                     asset_name = data.asset.params["unit-name"];
                     zerosIN = iamount;
                     let asaname = (asset_id === 0)?"":asset_id;
-                    document.getElementById ("input-readonly").innerText = asaname + " " + asset_name
+                    document.getElementById ("input-readonly").innerText =  asset_name + " - " + asaname
                 }
                 else {
                     asset_name2 = data.asset.params["unit-name"]
                     zerosOut = iamount;
                     let asaname = (asset_id2 === 0)?"":asset_id2;
-                    document.getElementById ("output-readonly").innerText = asaname + " " + asset_name2
+                    document.getElementById ("output-readonly").innerText = asset_name2 + " - " + asaname
                 }
             })
             .catch(function () {
@@ -296,7 +304,7 @@ async function connect2() {
 }
 
 function handleChange() {
-    document.getElementById("quote").innerText = null;
+    document.getElementById("quote").innerText = "";
     //asset_id = parseInt(document.getElementById("input").value);
 
     //asset_id2 = parseInt(document.getElementById("output").value);
@@ -320,38 +328,6 @@ function handleChange() {
             })
         })
     })
-}
-
-async function getPoolInfo(paddress) {
-    try {
-        let account_info = await algodClient.accountInformation(paddress).do();
-        console.log(account_info);
-        liquidity_asset_id = account_info["created-assets"][0].index
-        let app_state = account_info['apps-local-state'][0]['key-value']
-        console.log(app_state)
-
-        let appObject = {};
-        app_state.forEach(item => {
-            let key = item.key;
-            let value = item.value;
-            appObject[key] = value;
-        })
-
-        console.log(appObject)
-        let reserve1 = appObject["czE="].uint;
-        let reserve2 = appObject["czI="].uint;
-        if (inputIsAlgo === false) {
-            let r1 = reserve1;
-            reserve1 = reserve2;
-            reserve2 = r1;
-        }
-        let quote = fixedInQuote(amount, reserve1, reserve2)
-        console.log(quote)
-        return quote
-    }
-    catch (error) {
-        console.log(error);
-    }
 }
 
 //document.getElementById ("pool-readonly").innerText = pool
