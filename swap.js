@@ -20,13 +20,13 @@ const validator_app_id = MAINNET_VALIDATOR_APP_ID;
 
 var liquidity_asset_id = 359370898
 
-var asset_id = window.swapDetails.assetid || 137594422;
+var asset_id = window.swapDetails.assetid
 
-var asset_id2 = window.swapDetails.assetid2 || 0;
+var asset_id2 = window.swapDetails.assetid2
 
 var user_address = "C5E5W3BERJALL2ZH4YB3TAP7ZSJH2PJUPDHLGF74YE6DBMQ62AA47IXGNQ"
 
-var pool = window.swapDetails.pool || "F5YT2BPHPNCLHR44ZKWJOE6Z7RMVAZSX4KIWMEBYSKGBFEF7KJJ742QYT4"
+var pool = window.swapDetails.pool
 
 var zerosIN = 1000000;
 var zerosOut = 1000000;
@@ -211,12 +211,14 @@ async function getZeros(index, isInput) {
                 if (isInput) {
                     asset_name = data.asset.params["unit-name"];
                     zerosIN = iamount;
-                    document.getElementById ("input-readonly").innerText = asset_id + " " + asset_name
+                    let asaname = (asset_id === 0)?"":asset_id;
+                    document.getElementById ("input-readonly").innerText = asaname + " " + asset_name
                 }
                 else {
                     asset_name2 = data.asset.params["unit-name"]
                     zerosOut = iamount;
-                    document.getElementById ("output-readonly").innerText = asset_id2 + " " + asset_name2
+                    let asaname = (asset_id2 === 0)?"":asset_id2;
+                    document.getElementById ("output-readonly").innerText = asaname + " " + asset_name2
                 }
             })
             .catch(function () {
@@ -226,12 +228,14 @@ async function getZeros(index, isInput) {
         if (isInput) {
             asset_name = "Algo";
             zerosIN = 1000000;
-            document.getElementById ("input-readonly").innerText = asset_id + " " + "Algo"
+            let asaname = (asset_id === 0)?"":asset_id;
+            document.getElementById ("input-readonly").innerText = asaname + " " + "Algo"
         }
         else {
             asset_name2 = "Algo";
             zerosOut = 1000000;
-            document.getElementById ("output-readonly").innerText = asset_id2 + " " + "Algo"
+            let asaname = (asset_id2 === 0)?"":asset_id2;
+            document.getElementById ("output-readonly").innerText = asaname + " " + "Algo"
         }
     }
 }
@@ -350,4 +354,4 @@ async function getPoolInfo(paddress) {
     }
 }
 
-document.getElementById ("pool-readonly").innerText = pool
+//document.getElementById ("pool-readonly").innerText = pool
