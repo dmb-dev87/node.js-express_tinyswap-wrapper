@@ -2,6 +2,12 @@ import 'regenerator-runtime/runtime'
 import algosdk from 'algosdk';
 import MyAlgoConnect from '@randlabs/myalgo-connect';
 
+//important! comment out bellow before npm publish!!!!!
+/*window.swapDetails = {assetid: 0,
+assetid2: 137594422,
+pool: "4QDLMVQORYVMBABY2EXGIVK53TBJWURS4PH2OC2TMOGKSZVMTOA6XHHZE4"
+}*/
+
 
 const screen2 = '<div class="modal-backdrop fade show"></div><div class="modal-dialog"><div class="modal-content-2"><div class="modal-header"><div class="real-modal-title"><h5 class="modal-title" id="exampleModalLiveLabel"><h5 class="algoswap-btn" href="/" aria-label="AlgoSwap"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="28" class="d-block my-1" viewBox="-3 0 48 21" role="img"><title>AlgoSwap</title><path class="ap-lg" d="M185.6,94l-8.8-14.8c0-.1-.1-.1-.2-.2l-.3-.3h0a1.3,1.3,0,0,0-1.7.6s-10.1,19.3-11.2,21.6a.6.6,0,0,0,0,.6,1,1,0,0,0,1,.7h2.5a.9.9,0,0,0,1-.5l7-13.5.2-.2.3-.3a.9.9,0,0,1,1.1.2h.1l4.4,7.4a1.1,1.1,0,0,0,.9.5h2.6a1.6,1.6,0,0,0,1-.5c.3-.4.3-.5.3-.6A2.4,2.4,0,0,0,185.6,94Z" transform="translate(-163.3 -78.6)" fill="currentColor"></path><path class="ap-md" d="M199.2,90.3a6.9,6.9,0,0,0-4.9-2.1h-2.6a2.7,2.7,0,0,1-2.7-2,2.3,2.3,0,0,1,.5-2.1,2.4,2.4,0,0,1,1.9-1h7.1a1.1,1.1,0,0,0,1.1-.6l1-2a1,1,0,0,0-.1-1.2.9.9,0,0,0-1-.7h-9.4a4.6,4.6,0,0,0-3.8,2c-3,3.8-2,7.9.2,10.1a7.1,7.1,0,0,0,4.9,2.1h2.7a2.6,2.6,0,0,1,2.7,2,2.4,2.4,0,0,1-.6,2,2.6,2.6,0,0,1-1.9,1H180.2c-.2.1-.4-.1-.5-.2l-2.6-4.5a1.2,1.2,0,0,0-2.2,0l-3.7,7.4a1.5,1.5,0,0,0,0,1.3,1.1,1.1,0,0,0,1.1.5h23.3a5.8,5.8,0,0,0,3.9-1.9C202.5,96.5,201.4,92.5,199.2,90.3Z" transform="translate(-163.3 -78.6)" fill="currentColor"></path></svg><span class="fs-5"><strong>Algo</strong>Swap</span></h5></div><button id="div-close" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div  p={0} ><div class="higher-header-container"></div><div class="modal-body" id="sure" p={4} pb={1} mb={3}><h3 id="messagioHeadagio">Confirm Action</h3><p id="messagio">Select wallet, then click "Connect"</p></div><div class="flexy" px={1}><div class="algo-flex" align="center"><div id="shhh"><div class="modal-footer"><div class="dropdown"><select class="form-select form-select-lg" aria-label=".form-select-lg example" id="walletswitch"><option>myAlgoWallet</option><option disabled>WalletConnect</option><option disabled>AlgoSigner</option></select></div><button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="div-close-2">Close</button><button onclick="connect()" id="algobutton" type="button" class="btn btn-primary">Connect</button></div><div class="modal-footer-cr"><div class="footer-link-ink" >2021 HEADLINE INC.</div><div>Powered by <a class="footer-link" href="https://www.pipeline-ui.com" target="_blank" rel="noopener noreferrer">PIPELINE-UI</a><a class="footer-link-2" href="mailto:contact@headline-inc.com" target="_blank" rel="noopener noreferrer">Contact</a></div></div></div></div></div></div></div>'
  document.getElementById("swap-root").innerHTML =
@@ -185,10 +191,10 @@ showDate();
 
 //begin logicsig code
 
-const definition = {
-  "bytecode": 'BCAIAQCBgICAgICAgPABAwSAgICAgICAgPABBQYhBSQNRDEJMgMSRDEVMgMSRDEgMgMSRDIEIg1EMwEAMQASRDMBECEHEkQzARiBgoCAgICAgIDwARJEMwEZIhIzARslEhA3ARoAgAlib290c3RyYXASEEAAXDMBGSMSRDMBG4ECEjcBGgCABHN3YXASEEACEzMBGyISRDcBGgCABG1pbnQSQAE5NwEaAIAEYnVybhJAAYM3ARoAgAZyZWRlZW0SQAIzNwEaAIAEZmVlcxJAAlAAIQYhBCQjEk0yBBJENwEaARchBRI3ARoCFyQSEEQzAgAxABJEMwIQJRJEMwIhIxJEMwIiIxwSRDMCIyEHEkQzAiQjEkQzAiWAB1RNMVBPT0wSRDMCJlEADYANVGlueW1hbiBQb29sIBJEMwIngBNodHRwczovL3RpbnltYW4ub3JnEkQzAikyAxJEMwIqMgMSRDMCKzIDEkQzAiwyAxJEMwMAMQASRDMDECEEEkQzAxEhBRJEMwMUMQASRDMDEiMSRCQjE0AAEDMBATMCAQgzAwEINQFCAYkzBAAxABJEMwQQIQQSRDMEESQSRDMEFDEAEkQzBBIjEkQzAQEzAgEIMwMBCDMEAQg1AUIBVDIEIQYSRDcBHAExABNENwEcATMEFBJEMwIAMQATRDMCFDEAEkQzAwAzAgASRDMDFDMDBzMDECISTTEAEkQzBAAxABJEMwQUMwIAEkQzAQEzBAEINQFCAPwyBCEGEkQ3ARwBMQATRDcBHAEzAhQSRDMDFDMDBzMDECISTTcBHAESRDMCADEAEkQzAhQzBAASRDMDADEAEkQzAxQzAwczAxAiEk0zBAASRDMEADEAE0QzBBQxABJEMwEBMwIBCDMDAQg1AUIAjjIEIQQSRDcBHAExABNEMwIANwEcARJEMwIAMQATRDMDADEAEkQzAhQzAgczAhAiEk0xABJEMwMUMwMHMwMQIhJNMwIAEkQzAQEzAwEINQFCADwyBCUSRDcBHAExABNEMwIUMwIHMwIQIhJNNwEcARJEMwEBMwIBCDUBQgARMgQlEkQzAQEzAgEINQFCAAAzAAAxABNEMwAHMQASRDMACDQBD0M=',
-  "address": "5MKWI634X65LPTLRYB6PP4IVMTV75UKTYID2BQ5ATCVKXUW5XYGTMU7BSI",
-  "size": 839,
+const definition =  {
+  "bytecode": "BCAIAQCBgICAgICAgPABgICAgICAgIDwAQMEBQYlJA1EMQkyAxJEMRUyAxJEMSAyAxJEMgQiDUQzAQAxABJEMwEQIQcSRDMBGIGCgICAgICAgPABEkQzARkiEjMBGyEEEhA3ARoAgAlib290c3RyYXASEEAAXDMBGSMSRDMBG4ECEjcBGgCABHN3YXASEEACOzMBGyISRDcBGgCABG1pbnQSQAE7NwEaAIAEYnVybhJAAZg3ARoAgAZyZWRlZW0SQAJbNwEaAIAEZmVlcxJAAnkAIQYhBSQjEk0yBBJENwEaARclEjcBGgIXJBIQRDMCADEAEkQzAhAhBBJEMwIhIxJEMwIiIxwSRDMCIyEHEkQzAiQjEkQzAiWACFRNUE9PTDExEkQzAiZRAA+AD1RpbnltYW5Qb29sMS4xIBJEMwIngBNodHRwczovL3RpbnltYW4ub3JnEkQzAikyAxJEMwIqMgMSRDMCKzIDEkQzAiwyAxJEMwMAMQASRDMDECEFEkQzAxElEkQzAxQxABJEMwMSIxJEJCMTQAAQMwEBMwIBCDMDAQg1AUIBsTMEADEAEkQzBBAhBRJEMwQRJBJEMwQUMQASRDMEEiMSRDMBATMCAQgzAwEIMwQBCDUBQgF8MgQhBhJENwEcATEAE0Q3ARwBMwQUEkQzAgAxABNEMwIUMQASRDMDADMCABJEMwIRJRJEMwMUMwMHMwMQIhJNMQASRDMDESMzAxAiEk0kEkQzBAAxABJEMwQUMwIAEkQzAQEzBAEINQFCAREyBCEGEkQ3ARwBMQATRDcBHAEzAhQSRDMDFDMDBzMDECISTTcBHAESRDMCADEAEkQzAhQzBAASRDMCESUSRDMDADEAEkQzAxQzAwczAxAiEk0zBAASRDMDESMzAxAiEk0kEkQzBAAxABNEMwQUMQASRDMBATMCAQgzAwEINQFCAJAyBCEFEkQ3ARwBMQATRDMCADcBHAESRDMCADEAE0QzAwAxABJEMwIUMwIHMwIQIhJNMQASRDMDFDMDBzMDECISTTMCABJEMwEBMwMBCDUBQgA+MgQhBBJENwEcATEAE0QzAhQzAgczAhAiEk03ARwBEkQzAQEzAgEINQFCABIyBCEEEkQzAQEzAgEINQFCAAAzAAAxABNEMwAHMQASRDMACDQBD0M=",
+  "address": "ABUKAXTANWR6K6ZYV75DWJEPVWWOU6SFUVRI6QHO44E4SIDLHBTD2CZ64A",
+  "size": 881,
   "variables": [
     {
       "name": "TMPL_ASSET_ID_2",
@@ -199,17 +205,17 @@ const definition = {
     {
       "name": "TMPL_ASSET_ID_1",
       "type": "int",
-      "index": 17,
+      "index": 15,
       "length": 10
     },
     {
       "name": "TMPL_VALIDATOR_APP_ID",
       "type": "int",
-      "index": 75,
+      "index": 74,
       "length": 10
     }
   ],
-  "source": "https://github.com/tinymanorg/tinyman-contracts-v1/tree/6e150df8e3e74458f947f3399c6f37e7d4289d21/contracts/pool_logicsig.teal.tmpl"
+  "source": "https://github.com/tinymanorg/tinyman-contracts-v1/tree/13acadd1a619d0fcafadd6f6c489a906bf347484/contracts/pool_logicsig.teal.tmpl"
 }
 
 
@@ -244,6 +250,7 @@ function encode_varint(number) {
     if (number) { buf.push(towrite | 128) }
     else { buf.push(towrite); break }
   }
+  console.log(buf)
   return buf
 }
 
@@ -264,11 +271,6 @@ function get_pool_logicsig(validator_app_id, asset1_id, asset2_id) {
 
 const myAlgoWallet = new MyAlgoConnect();
 
-/*window.swapDetails = {assetid: 137594422,
-assetid2: 0,
-pool: "F5YT2BPHPNCLHR44ZKWJOE6Z7RMVAZSX4KIWMEBYSKGBFEF7KJJ742QYT4"
-}*/
-
 var slippage = 0.05
 
 var lsig = undefined;
@@ -277,8 +279,8 @@ var asset_name = ""
 
 var asset_name2 = ""
 
-const TESTNET_VALIDATOR_APP_ID = 21580889
-const MAINNET_VALIDATOR_APP_ID = 350338509
+const TESTNET_VALIDATOR_APP_ID = 62368684
+const MAINNET_VALIDATOR_APP_ID = 552635992
 
 const validator_app_id = MAINNET_VALIDATOR_APP_ID;
 
@@ -444,7 +446,9 @@ function toUintArray(input) {
 }
 
 function prepareSig() {
-    let bytecode2 = get_pool_logicsig(350338509, asset_id, asset_id2);
+    let bytecode2 = get_pool_logicsig(validator_app_id, asset_id, asset_id2);
+    console.log(bytecode2)
+    console.log("Attempting to make logic sig")
     lsig = algosdk.makeLogicSig(bytecode2);
 }
 
@@ -520,7 +524,7 @@ function convertInput() {
 
 getZeros(asset_id, true);
 getZeros(asset_id2, false);
-prepareSig();
+//prepareSig();
 handleChange();
 
 var txid = ""
