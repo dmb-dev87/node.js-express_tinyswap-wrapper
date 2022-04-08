@@ -38080,7 +38080,2480 @@ module.exports = MyAlgoConnect;
 },{"./popup/popup":"node_modules/@randlabs/myalgo-connect/lib/popup/popup.js","./utils/utils":"node_modules/@randlabs/myalgo-connect/lib/utils/utils.js","./utils/errors":"node_modules/@randlabs/myalgo-connect/lib/utils/errors.js","./messaging/Messaging":"node_modules/@randlabs/myalgo-connect/lib/messaging/Messaging.js","buffer":"node_modules/node-libs-browser/node_modules/buffer/index.js"}],"node_modules/@randlabs/myalgo-connect/index.js":[function(require,module,exports) {
 module.exports = require("./lib/main");
 
-},{"./lib/main":"node_modules/@randlabs/myalgo-connect/lib/main.js"}],"src/index.js":[function(require,module,exports) {
+},{"./lib/main":"node_modules/@randlabs/myalgo-connect/lib/main.js"}],"src/assets.json":[function(require,module,exports) {
+module.exports = {
+  "0": {
+    "id": "0",
+    "name": "Algorand",
+    "unit_name": "ALGO",
+    "decimals": 6,
+    "url": "https://algorand.org",
+    "total_amount": "6615503326932151",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/0/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/0/icon.svg"
+    },
+    "deleted": false
+  },
+  "163650": {
+    "id": "163650",
+    "decimals": 6,
+    "name": "Asia Reserve Currency Coin",
+    "unit_name": "ARCC",
+    "url": "",
+    "total_amount": "88616203378510000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/163650/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/163650/icon.svg"
+    },
+    "deleted": false
+  },
+  "312769": {
+    "id": "312769",
+    "decimals": 6,
+    "name": "Tether USDt",
+    "unit_name": "USDt",
+    "url": "",
+    "total_amount": "18446744073709552000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/312769/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/312769/icon.svg"
+    },
+    "deleted": false
+  },
+  "2751733": {
+    "id": "2751733",
+    "decimals": 7,
+    "name": "Realio Token",
+    "unit_name": "RIO",
+    "url": "",
+    "total_amount": "1000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/2751733/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/2751733/icon.svg"
+    },
+    "deleted": false
+  },
+  "2757561": {
+    "id": "2757561",
+    "decimals": 7,
+    "name": "realioUSD",
+    "unit_name": "rUSD",
+    "url": "",
+    "total_amount": "1000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/2757561/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/2757561/icon.svg"
+    },
+    "deleted": false
+  },
+  "27165954": {
+    "id": "27165954",
+    "decimals": 6,
+    "name": "PLANET",
+    "unit_name": "Planets",
+    "url": "",
+    "total_amount": "4500000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/27165954/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/27165954/icon.svg"
+    },
+    "deleted": false
+  },
+  "31566704": {
+    "id": "31566704",
+    "decimals": 6,
+    "name": "USDC",
+    "unit_name": "USDC",
+    "url": "",
+    "total_amount": "18446744073709552000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/31566704/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/31566704/icon.svg"
+    },
+    "deleted": false
+  },
+  "137594422": {
+    "id": "137594422",
+    "decimals": 6,
+    "name": "HEADLINE",
+    "unit_name": "HDL",
+    "url": "",
+    "total_amount": "25000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/137594422/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/137594422/icon.svg"
+    },
+    "deleted": false
+  },
+  "142838028": {
+    "id": "142838028",
+    "decimals": 2,
+    "name": "ALGO FAM TOKEN",
+    "unit_name": "FAME",
+    "url": "",
+    "total_amount": "1000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/142838028/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/142838028/icon.svg"
+    },
+    "deleted": false
+  },
+  "181380658": {
+    "id": "181380658",
+    "decimals": 2,
+    "name": "Geography",
+    "unit_name": "GEO",
+    "url": "",
+    "total_amount": "5000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/181380658/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/181380658/icon.svg"
+    },
+    "deleted": false
+  },
+  "187215017": {
+    "id": "187215017",
+    "decimals": 2,
+    "name": "WaveCoin",
+    "unit_name": "WAVE",
+    "url": "",
+    "total_amount": "20000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/187215017/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/187215017/icon.svg"
+    },
+    "deleted": false
+  },
+  "226265212": {
+    "id": "226265212",
+    "decimals": 0,
+    "name": "AlgoNuts",
+    "unit_name": "ACORN",
+    "url": "",
+    "total_amount": "1000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/226265212/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/226265212/icon.svg"
+    },
+    "deleted": false
+  },
+  "226701642": {
+    "id": "226701642",
+    "decimals": 6,
+    "name": "Yieldly",
+    "unit_name": "YLDY",
+    "url": "",
+    "total_amount": "10000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/226701642/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/226701642/icon.svg"
+    },
+    "deleted": false
+  },
+  "227358511": {
+    "id": "227358511",
+    "decimals": 2,
+    "name": "ALGore",
+    "unit_name": "ALGR",
+    "url": "",
+    "total_amount": "100000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/227358511/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/227358511/icon.svg"
+    },
+    "deleted": false
+  },
+  "230946361": {
+    "id": "230946361",
+    "decimals": 6,
+    "name": "AlgoGems",
+    "unit_name": "GEMS",
+    "url": "",
+    "total_amount": "10000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/230946361/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/230946361/icon.svg"
+    },
+    "deleted": false
+  },
+  "231880341": {
+    "id": "231880341",
+    "decimals": 7,
+    "name": "LMX",
+    "unit_name": "lmx",
+    "url": "",
+    "total_amount": "1000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/231880341/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/231880341/icon.svg"
+    },
+    "deleted": false
+  },
+  "233939122": {
+    "id": "233939122",
+    "decimals": 0,
+    "name": "AlgoWorld Token",
+    "unit_name": "AWT",
+    "url": "",
+    "total_amount": "10000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/233939122/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/233939122/icon.svg"
+    },
+    "deleted": false
+  },
+  "234994096": {
+    "id": "234994096",
+    "decimals": 0,
+    "name": "Matrix",
+    "unit_name": "MTRX",
+    "url": "",
+    "total_amount": "100000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/234994096/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/234994096/icon.svg"
+    },
+    "deleted": false
+  },
+  "239444645": {
+    "id": "239444645",
+    "decimals": 0,
+    "name": "Kaafila",
+    "unit_name": "KFL",
+    "url": "",
+    "total_amount": "100000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/239444645/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/239444645/icon.svg"
+    },
+    "deleted": false
+  },
+  "251014570": {
+    "id": "251014570",
+    "decimals": 0,
+    "name": "Blocks",
+    "unit_name": "Block",
+    "url": "",
+    "total_amount": "42000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/251014570/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/251014570/icon.svg"
+    },
+    "deleted": false
+  },
+  "266846137": {
+    "id": "266846137",
+    "decimals": 7,
+    "name": "SIGN.NET",
+    "unit_name": "SIGN",
+    "url": "",
+    "total_amount": "21000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/266846137/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/266846137/icon.svg"
+    },
+    "deleted": false
+  },
+  "281003266": {
+    "id": "281003266",
+    "decimals": 0,
+    "name": "NFT Grocery Store Coupon 🎫",
+    "unit_name": "Coup🎫",
+    "url": "",
+    "total_amount": "9007199254740991",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/281003266/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/281003266/icon.svg"
+    },
+    "deleted": false
+  },
+  "281779305": {
+    "id": "281779305",
+    "decimals": 4,
+    "name": "Osmiridian ",
+    "unit_name": "OSM",
+    "url": "",
+    "total_amount": "10000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/281779305/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/281779305/icon.svg"
+    },
+    "deleted": false
+  },
+  "283820866": {
+    "id": "283820866",
+    "decimals": 9,
+    "name": "Xfinite Entertainment Token",
+    "unit_name": "XET",
+    "url": "",
+    "total_amount": "4000000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/283820866/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/283820866/icon.svg"
+    },
+    "deleted": false
+  },
+  "287867876": {
+    "id": "287867876",
+    "decimals": 10,
+    "name": "Opulous",
+    "unit_name": "OPUL",
+    "url": "",
+    "total_amount": "5000000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/287867876/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/287867876/icon.svg"
+    },
+    "deleted": false
+  },
+  "291248873": {
+    "id": "291248873",
+    "decimals": 0,
+    "name": "F2E SHARES",
+    "unit_name": "F2E",
+    "url": "",
+    "total_amount": "250000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/291248873/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/291248873/icon.svg"
+    },
+    "deleted": false
+  },
+  "293547785": {
+    "id": "293547785",
+    "decimals": 0,
+    "name": "DisagioCoin",
+    "unit_name": "DSGC",
+    "url": "",
+    "total_amount": "1000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/293547785/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/293547785/icon.svg"
+    },
+    "deleted": false
+  },
+  "297995609": {
+    "id": "297995609",
+    "decimals": 2,
+    "name": "Choice Coin",
+    "unit_name": "Choice",
+    "url": "",
+    "total_amount": "100000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/297995609/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/297995609/icon.svg"
+    },
+    "deleted": false
+  },
+  "300208676": {
+    "id": "300208676",
+    "decimals": 6,
+    "name": "Smile Coin",
+    "unit_name": "SMILE",
+    "url": "",
+    "total_amount": "10000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/300208676/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/300208676/icon.svg"
+    },
+    "deleted": false
+  },
+  "305992851": {
+    "id": "305992851",
+    "decimals": 3,
+    "name": "Algoneer",
+    "unit_name": "AGNR",
+    "url": "",
+    "total_amount": "10000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/305992851/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/305992851/icon.svg"
+    },
+    "deleted": false
+  },
+  "310014962": {
+    "id": "310014962",
+    "decimals": 0,
+    "name": "AlcheCoin",
+    "unit_name": "ALCH",
+    "url": "",
+    "total_amount": "100000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/310014962/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/310014962/icon.svg"
+    },
+    "deleted": false
+  },
+  "317264620": {
+    "id": "317264620",
+    "decimals": 0,
+    "name": "Freckle VIP",
+    "unit_name": "FRKL_VIP",
+    "url": "",
+    "total_amount": "2500",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/317264620/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/317264620/icon.svg"
+    },
+    "deleted": false
+  },
+  "317670428": {
+    "id": "317670428",
+    "decimals": 10,
+    "name": "Zenny",
+    "unit_name": "ZENI",
+    "url": "",
+    "total_amount": "10000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/317670428/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/317670428/icon.svg"
+    },
+    "deleted": false
+  },
+  "319473667": {
+    "id": "319473667",
+    "decimals": 5,
+    "name": "Curator Coin",
+    "unit_name": "CURATOR",
+    "url": "",
+    "total_amount": "100000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/319473667/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/319473667/icon.svg"
+    },
+    "deleted": false
+  },
+  "329110405": {
+    "id": "329110405",
+    "decimals": 0,
+    "name": "TacoCoin",
+    "unit_name": "Tacos",
+    "url": "",
+    "total_amount": "10000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/329110405/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/329110405/icon.svg"
+    },
+    "deleted": false
+  },
+  "330109984": {
+    "id": "330109984",
+    "decimals": 2,
+    "name": "CoMManDCoin",
+    "unit_name": "comand",
+    "url": "",
+    "total_amount": "8400000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/330109984/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/330109984/icon.svg"
+    },
+    "deleted": false
+  },
+  "330168845": {
+    "id": "330168845",
+    "decimals": 2,
+    "name": "KryptoNurd",
+    "unit_name": "NURD",
+    "url": "",
+    "total_amount": "100000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/330168845/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/330168845/icon.svg"
+    },
+    "deleted": false
+  },
+  "338543684": {
+    "id": "338543684",
+    "decimals": 5,
+    "name": "NCoin",
+    "unit_name": "NCOINA",
+    "url": "",
+    "total_amount": "200000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/338543684/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/338543684/icon.svg"
+    },
+    "deleted": false
+  },
+  "342889824": {
+    "id": "342889824",
+    "decimals": 6,
+    "name": "Board",
+    "unit_name": "BOARD",
+    "url": "",
+    "total_amount": "10000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/342889824/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/342889824/icon.svg"
+    },
+    "deleted": false
+  },
+  "352658929": {
+    "id": "352658929",
+    "decimals": 0,
+    "name": "AlgoDoggo",
+    "unit_name": "Doggo",
+    "url": "",
+    "total_amount": "10000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/352658929/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/352658929/icon.svg"
+    },
+    "deleted": false
+  },
+  "353409462": {
+    "id": "353409462",
+    "decimals": 4,
+    "name": "AlgoBasket",
+    "unit_name": "ABSKT",
+    "url": "",
+    "total_amount": "100000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/353409462/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/353409462/icon.svg"
+    },
+    "deleted": false
+  },
+  "359487296": {
+    "id": "359487296",
+    "decimals": 0,
+    "name": "aDOGE",
+    "unit_name": "aDOGE",
+    "url": "",
+    "total_amount": "1000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/359487296/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/359487296/icon.svg"
+    },
+    "deleted": false
+  },
+  "361339277": {
+    "id": "361339277",
+    "decimals": 2,
+    "name": "SQDC",
+    "unit_name": "Squid",
+    "url": "",
+    "total_amount": "10000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/361339277/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/361339277/icon.svg"
+    },
+    "deleted": false
+  },
+  "361671874": {
+    "id": "361671874",
+    "decimals": 5,
+    "name": "KittenCoin",
+    "unit_name": "KTNC",
+    "url": "",
+    "total_amount": "100000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/361671874/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/361671874/icon.svg"
+    },
+    "deleted": false
+  },
+  "361806984": {
+    "id": "361806984",
+    "decimals": 0,
+    "name": "AlgoMeow",
+    "unit_name": "MEOW",
+    "url": "",
+    "total_amount": "10000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/361806984/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/361806984/icon.svg"
+    },
+    "deleted": false
+  },
+  "361940410": {
+    "id": "361940410",
+    "decimals": 0,
+    "name": "FairMeme Token",
+    "unit_name": "FairMeme",
+    "url": "",
+    "total_amount": "1000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/361940410/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/361940410/icon.svg"
+    },
+    "deleted": false
+  },
+  "366511140": {
+    "id": "366511140",
+    "decimals": 0,
+    "name": "FairMeme AlgoLocker",
+    "unit_name": "FMA",
+    "url": "",
+    "total_amount": "100000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/366511140/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/366511140/icon.svg"
+    },
+    "deleted": false
+  },
+  "367029007": {
+    "id": "367029007",
+    "decimals": 0,
+    "name": "DeafCoin",
+    "unit_name": "DEAF",
+    "url": "",
+    "total_amount": "10000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/367029007/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/367029007/icon.svg"
+    },
+    "deleted": false
+  },
+  "367058172": {
+    "id": "367058172",
+    "decimals": 7,
+    "name": "Realio Network LTD",
+    "unit_name": "RST",
+    "url": "",
+    "total_amount": "500000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/367058172/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/367058172/icon.svg"
+    },
+    "deleted": false
+  },
+  "372666897": {
+    "id": "372666897",
+    "decimals": 4,
+    "name": "LionCoin",
+    "unit_name": "Lions",
+    "url": "",
+    "total_amount": "4463732138",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/372666897/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/372666897/icon.svg"
+    },
+    "deleted": false
+  },
+  "373760850": {
+    "id": "373760850",
+    "decimals": 0,
+    "name": "Christmas Coin",
+    "unit_name": "xmas",
+    "url": "",
+    "total_amount": "1000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/373760850/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/373760850/icon.svg"
+    },
+    "deleted": false
+  },
+  "378382099": {
+    "id": "378382099",
+    "decimals": 4,
+    "name": "Tinychart Token",
+    "unit_name": "TINY",
+    "url": "",
+    "total_amount": "100000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/378382099/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/378382099/icon.svg"
+    },
+    "deleted": false
+  },
+  "382781470": {
+    "id": "382781470",
+    "decimals": 2,
+    "name": "BANAAN",
+    "unit_name": "BANAAN",
+    "url": "",
+    "total_amount": "100000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/382781470/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/382781470/icon.svg"
+    },
+    "deleted": false
+  },
+  "383581973": {
+    "id": "383581973",
+    "decimals": 6,
+    "name": "XBULL",
+    "unit_name": "XBULL",
+    "url": "",
+    "total_amount": "100000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/383581973/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/383581973/icon.svg"
+    },
+    "deleted": false
+  },
+  "384303832": {
+    "id": "384303832",
+    "decimals": 0,
+    "name": "AKITA INU TOKEN",
+    "unit_name": "AKITA",
+    "url": "",
+    "total_amount": "1000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/384303832/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/384303832/icon.svg"
+    },
+    "deleted": false
+  },
+  "386192725": {
+    "id": "386192725",
+    "decimals": 8,
+    "name": "goBTC",
+    "unit_name": "goBTC",
+    "url": "",
+    "total_amount": "2100000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/386192725/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/386192725/icon.svg"
+    },
+    "deleted": false
+  },
+  "386195940": {
+    "id": "386195940",
+    "decimals": 8,
+    "name": "goETH",
+    "unit_name": "goETH",
+    "url": "",
+    "total_amount": "15000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/386195940/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/386195940/icon.svg"
+    },
+    "deleted": false
+  },
+  "388502764": {
+    "id": "388502764",
+    "decimals": 6,
+    "name": "Svansy Coin",
+    "unit_name": "SVANSY",
+    "url": "",
+    "total_amount": "420420420420420400",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/388502764/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/388502764/icon.svg"
+    },
+    "deleted": false
+  },
+  "388505064": {
+    "id": "388505064",
+    "decimals": 2,
+    "name": "AlgoShibaInu",
+    "unit_name": "aSHIB",
+    "url": "",
+    "total_amount": "100000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/388505064/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/388505064/icon.svg"
+    },
+    "deleted": false
+  },
+  "388592191": {
+    "id": "388592191",
+    "decimals": 1,
+    "name": "Chips",
+    "unit_name": "chip",
+    "url": "",
+    "total_amount": "10000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/388592191/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/388592191/icon.svg"
+    },
+    "deleted": false
+  },
+  "389294682": {
+    "id": "389294682",
+    "decimals": 2,
+    "name": "Numbers Token",
+    "unit_name": "NT",
+    "url": "",
+    "total_amount": "10000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/389294682/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/389294682/icon.svg"
+    },
+    "deleted": false
+  },
+  "390982964": {
+    "id": "390982964",
+    "decimals": 6,
+    "name": "Algo MoonBoi",
+    "unit_name": "MOONBOI",
+    "url": "",
+    "total_amount": "100000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/390982964/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/390982964/icon.svg"
+    },
+    "deleted": false
+  },
+  "391379500": {
+    "id": "391379500",
+    "decimals": 6,
+    "name": "Dope Panda",
+    "unit_name": "DPANDA",
+    "url": "",
+    "total_amount": "1000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/391379500/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/391379500/icon.svg"
+    },
+    "deleted": false
+  },
+  "393155456": {
+    "id": "393155456",
+    "decimals": 2,
+    "name": "Clean Ocean Token",
+    "unit_name": "FISH",
+    "url": "",
+    "total_amount": "725000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/393155456/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/393155456/icon.svg"
+    },
+    "deleted": false
+  },
+  "393495312": {
+    "id": "393495312",
+    "decimals": 8,
+    "name": "Algorand Faucet Drops",
+    "unit_name": "AFD",
+    "url": "",
+    "total_amount": "10000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/393495312/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/393495312/icon.svg"
+    },
+    "deleted": false
+  },
+  "393498731": {
+    "id": "393498731",
+    "decimals": 2,
+    "name": "Gramo",
+    "unit_name": "GRAMO",
+    "url": "",
+    "total_amount": "2000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/393498731/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/393498731/icon.svg"
+    },
+    "deleted": false
+  },
+  "393537671": {
+    "id": "393537671",
+    "decimals": 6,
+    "name": "ASA Stats Token",
+    "unit_name": "ASASTATS",
+    "url": "",
+    "total_amount": "1000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/393537671/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/393537671/icon.svg"
+    },
+    "deleted": false
+  },
+  "394014424": {
+    "id": "394014424",
+    "decimals": 0,
+    "name": "ToolsX",
+    "unit_name": "ToolsX",
+    "url": "",
+    "total_amount": "100000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/394014424/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/394014424/icon.svg"
+    },
+    "deleted": false
+  },
+  "394904431": {
+    "id": "394904431",
+    "decimals": 6,
+    "name": "AlgorandDoge",
+    "unit_name": "Pup",
+    "url": "",
+    "total_amount": "100000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/394904431/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/394904431/icon.svg"
+    },
+    "deleted": false
+  },
+  "396841550": {
+    "id": "396841550",
+    "decimals": 6,
+    "name": "Givechain",
+    "unit_name": "GCCT",
+    "url": "",
+    "total_amount": "10000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/396841550/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/396841550/icon.svg"
+    },
+    "deleted": false
+  },
+  "397111682": {
+    "id": "397111682",
+    "decimals": 2,
+    "name": "ALGO AVOCADO",
+    "unit_name": "$AVO",
+    "url": "",
+    "total_amount": "100000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/397111682/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/397111682/icon.svg"
+    },
+    "deleted": false
+  },
+  "397628309": {
+    "id": "397628309",
+    "decimals": 0,
+    "name": "PEAR",
+    "unit_name": "PEAR",
+    "url": "",
+    "total_amount": "100000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/397628309/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/397628309/icon.svg"
+    },
+    "deleted": false
+  },
+  "397629052": {
+    "id": "397629052",
+    "decimals": 0,
+    "name": "APPLE",
+    "unit_name": "APPLE",
+    "url": "",
+    "total_amount": "100000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/397629052/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/397629052/icon.svg"
+    },
+    "deleted": false
+  },
+  "400295506": {
+    "id": "400295506",
+    "decimals": 0,
+    "name": "Tosa Inu",
+    "unit_name": "TOSA",
+    "url": "",
+    "total_amount": "1000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/400295506/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/400295506/icon.svg"
+    },
+    "deleted": false
+  },
+  "400593267": {
+    "id": "400593267",
+    "decimals": 8,
+    "name": "DeFi-nite",
+    "unit_name": "Finite",
+    "url": "",
+    "total_amount": "2100000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/400593267/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/400593267/icon.svg"
+    },
+    "deleted": false
+  },
+  "401752010": {
+    "id": "401752010",
+    "decimals": 0,
+    "name": "Blapu",
+    "unit_name": "BLAPU",
+    "url": "",
+    "total_amount": "1000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/401752010/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/401752010/icon.svg"
+    },
+    "deleted": false
+  },
+  "402495345": {
+    "id": "402495345",
+    "decimals": 4,
+    "name": "DrinkItWriteIt",
+    "unit_name": "CHEERS",
+    "url": "",
+    "total_amount": "10000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/402495345/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/402495345/icon.svg"
+    },
+    "deleted": false
+  },
+  "403292234": {
+    "id": "403292234",
+    "decimals": 2,
+    "name": "ASA AKIRA",
+    "unit_name": "DP69",
+    "url": "",
+    "total_amount": "100000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/403292234/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/403292234/icon.svg"
+    },
+    "deleted": false
+  },
+  "403499324": {
+    "id": "403499324",
+    "decimals": 0,
+    "name": "Nexus",
+    "unit_name": "GP",
+    "url": "",
+    "total_amount": "10000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/403499324/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/403499324/icon.svg"
+    },
+    "deleted": false
+  },
+  "404044168": {
+    "id": "404044168",
+    "decimals": 4,
+    "name": "NEKOIN",
+    "unit_name": "Nekos",
+    "url": "",
+    "total_amount": "100000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/404044168/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/404044168/icon.svg"
+    },
+    "deleted": false
+  },
+  "406361925": {
+    "id": "406361925",
+    "decimals": 0,
+    "name": "Kitsune Inu",
+    "unit_name": "KITSU",
+    "url": "",
+    "total_amount": "10000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/406361925/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/406361925/icon.svg"
+    },
+    "deleted": false
+  },
+  "406383570": {
+    "id": "406383570",
+    "decimals": 0,
+    "name": "Flamingo Coin",
+    "unit_name": "FLAMINGO",
+    "url": "",
+    "total_amount": "1000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/406383570/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/406383570/icon.svg"
+    },
+    "deleted": false
+  },
+  "408177774": {
+    "id": "408177774",
+    "decimals": 0,
+    "name": "Deli Coin",
+    "unit_name": "DELI",
+    "url": "",
+    "total_amount": "10000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/408177774/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/408177774/icon.svg"
+    },
+    "deleted": false
+  },
+  "408200080": {
+    "id": "408200080",
+    "decimals": 6,
+    "name": "Raise Your Dongers",
+    "unit_name": "DONGER",
+    "url": "",
+    "total_amount": "1000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/408200080/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/408200080/icon.svg"
+    },
+    "deleted": false
+  },
+  "409604194": {
+    "id": "409604194",
+    "decimals": 2,
+    "name": "AlgOcean",
+    "unit_name": "AO",
+    "url": "",
+    "total_amount": "1000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/409604194/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/409604194/icon.svg"
+    },
+    "deleted": false
+  },
+  "411521263": {
+    "id": "411521263",
+    "decimals": 6,
+    "name": "Dungeon Gold",
+    "unit_name": "dAGR",
+    "url": "",
+    "total_amount": "21000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/411521263/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/411521263/icon.svg"
+    },
+    "deleted": false
+  },
+  "412056867": {
+    "id": "412056867",
+    "decimals": 6,
+    "name": "Shosha",
+    "unit_name": "SHSA",
+    "url": "",
+    "total_amount": "88888888000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/412056867/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/412056867/icon.svg"
+    },
+    "deleted": false
+  },
+  "413153825": {
+    "id": "413153825",
+    "decimals": 3,
+    "name": "Red Panda ASA",
+    "unit_name": "RPA",
+    "url": "",
+    "total_amount": "1000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/413153825/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/413153825/icon.svg"
+    },
+    "deleted": false
+  },
+  "415045633": {
+    "id": "415045633",
+    "decimals": 0,
+    "name": "Parsec",
+    "unit_name": "PRSC",
+    "url": "",
+    "total_amount": "206265",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/415045633/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/415045633/icon.svg"
+    },
+    "deleted": false
+  },
+  "416737271": {
+    "id": "416737271",
+    "decimals": 0,
+    "name": "Lunar Coin",
+    "unit_name": "LUNAR",
+    "url": "",
+    "total_amount": "250000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/416737271/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/416737271/icon.svg"
+    },
+    "deleted": false
+  },
+  "417708610": {
+    "id": "417708610",
+    "decimals": 0,
+    "name": "DEGEN Token",
+    "unit_name": "DEGEN",
+    "url": "",
+    "total_amount": "420000069",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/417708610/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/417708610/icon.svg"
+    },
+    "deleted": false
+  },
+  "421281844": {
+    "id": "421281844",
+    "decimals": 6,
+    "name": "tinybots",
+    "unit_name": "TBOTS",
+    "url": "",
+    "total_amount": "10000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/421281844/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/421281844/icon.svg"
+    },
+    "deleted": false
+  },
+  "426526699": {
+    "id": "426526699",
+    "decimals": 8,
+    "name": "Adventure Coin",
+    "unit_name": "ADVENTUR",
+    "url": "",
+    "total_amount": "100000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/426526699/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/426526699/icon.svg"
+    },
+    "deleted": false
+  },
+  "426980914": {
+    "id": "426980914",
+    "decimals": 2,
+    "name": "Raptor Coin",
+    "unit_name": "RCOIN",
+    "url": "",
+    "total_amount": "10000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/426980914/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/426980914/icon.svg"
+    },
+    "deleted": false
+  },
+  "428939741": {
+    "id": "428939741",
+    "decimals": 0,
+    "name": "Gubbermint",
+    "unit_name": "DEBT",
+    "url": "",
+    "total_amount": "800000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/428939741/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/428939741/icon.svg"
+    },
+    "deleted": false
+  },
+  "430838314": {
+    "id": "430838314",
+    "decimals": 0,
+    "name": "Astrocat",
+    "unit_name": "ACAT",
+    "url": "",
+    "total_amount": "10000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/430838314/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/430838314/icon.svg"
+    },
+    "deleted": false
+  },
+  "432975976": {
+    "id": "432975976",
+    "decimals": 3,
+    "name": "Commie Coin",
+    "unit_name": "USSR",
+    "url": "",
+    "total_amount": "2877280000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/432975976/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/432975976/icon.svg"
+    },
+    "deleted": false
+  },
+  "433379445": {
+    "id": "433379445",
+    "decimals": 0,
+    "name": "SUPERIO",
+    "unit_name": "SUPER",
+    "url": "",
+    "total_amount": "1000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/433379445/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/433379445/icon.svg"
+    },
+    "deleted": false
+  },
+  "434833101": {
+    "id": "434833101",
+    "decimals": 0,
+    "name": "PURA VIDA",
+    "unit_name": "VIDA",
+    "url": "",
+    "total_amount": "1000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/434833101/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/434833101/icon.svg"
+    },
+    "deleted": false
+  },
+  "435335235": {
+    "id": "435335235",
+    "decimals": 0,
+    "name": "Crescendo",
+    "unit_name": "CRSD",
+    "url": "",
+    "total_amount": "1500000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/435335235/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/435335235/icon.svg"
+    },
+    "deleted": false
+  },
+  "441139422": {
+    "id": "441139422",
+    "decimals": 6,
+    "name": "goMINT",
+    "unit_name": "goMINT",
+    "url": "",
+    "total_amount": "1000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/441139422/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/441139422/icon.svg"
+    },
+    "deleted": false
+  },
+  "442533843": {
+    "id": "442533843",
+    "decimals": 5,
+    "name": "Jam Coin",
+    "unit_name": "JAM",
+    "url": "",
+    "total_amount": "1000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/442533843/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/442533843/icon.svg"
+    },
+    "deleted": false
+  },
+  "444035862": {
+    "id": "444035862",
+    "decimals": 6,
+    "name": "ZONE",
+    "unit_name": "ZONE",
+    "url": "",
+    "total_amount": "1000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/444035862/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/444035862/icon.svg"
+    },
+    "deleted": false
+  },
+  "444108880": {
+    "id": "444108880",
+    "decimals": 0,
+    "name": "CryptoTrees",
+    "unit_name": "TREES",
+    "url": "",
+    "total_amount": "50000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/444108880/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/444108880/icon.svg"
+    },
+    "deleted": false
+  },
+  "444568464": {
+    "id": "444568464",
+    "decimals": 0,
+    "name": "Duckcoin",
+    "unit_name": "QUACK",
+    "url": "",
+    "total_amount": "50000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/444568464/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/444568464/icon.svg"
+    },
+    "deleted": false
+  },
+  "445362421": {
+    "id": "445362421",
+    "decimals": 10,
+    "name": "MAGMA",
+    "unit_name": "MAGM",
+    "url": "",
+    "total_amount": "7770000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/445362421/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/445362421/icon.svg"
+    },
+    "deleted": false
+  },
+  "445905873": {
+    "id": "445905873",
+    "decimals": 6,
+    "name": "AlgoLeagues Coin",
+    "unit_name": "ALC",
+    "url": "",
+    "total_amount": "1000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/445905873/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/445905873/icon.svg"
+    },
+    "deleted": false
+  },
+  "446220964": {
+    "id": "446220964",
+    "decimals": 3,
+    "name": "Animal Style",
+    "unit_name": "ANML",
+    "url": "",
+    "total_amount": "33000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/446220964/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/446220964/icon.svg"
+    },
+    "deleted": false
+  },
+  "447852812": {
+    "id": "447852812",
+    "decimals": 1,
+    "name": "ALGO LITE",
+    "unit_name": "AL",
+    "url": "",
+    "total_amount": "100000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/447852812/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/447852812/icon.svg"
+    },
+    "deleted": false
+  },
+  "451401073": {
+    "id": "451401073",
+    "decimals": 5,
+    "name": "Project REX ",
+    "unit_name": "REX ",
+    "url": "",
+    "total_amount": "500000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/451401073/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/451401073/icon.svg"
+    },
+    "deleted": false
+  },
+  "452047208": {
+    "id": "452047208",
+    "decimals": 6,
+    "name": "SockHODLER",
+    "unit_name": "SOCKS",
+    "url": "",
+    "total_amount": "100000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/452047208/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/452047208/icon.svg"
+    },
+    "deleted": false
+  },
+  "452399768": {
+    "id": "452399768",
+    "decimals": 6,
+    "name": "Vote Coin",
+    "unit_name": "Vote",
+    "url": "",
+    "total_amount": "1000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/452399768/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/452399768/icon.svg"
+    },
+    "deleted": false
+  },
+  "453816186": {
+    "id": "453816186",
+    "decimals": 6,
+    "name": "Aegir",
+    "unit_name": "AGR",
+    "url": "",
+    "total_amount": "600000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/453816186/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/453816186/icon.svg"
+    },
+    "deleted": false
+  },
+  "455356741": {
+    "id": "455356741",
+    "decimals": 0,
+    "name": "NFTrade",
+    "unit_name": "NFT",
+    "url": "",
+    "total_amount": "1000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/455356741/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/455356741/icon.svg"
+    },
+    "deleted": false
+  },
+  "456624580": {
+    "id": "456624580",
+    "decimals": 0,
+    "name": "Honeycomb",
+    "unit_name": "HNYC",
+    "url": "",
+    "total_amount": "1000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/456624580/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/456624580/icon.svg"
+    },
+    "deleted": false
+  },
+  "457007402": {
+    "id": "457007402",
+    "decimals": 0,
+    "name": "DarkDragonWing",
+    "unit_name": "DDW",
+    "url": "",
+    "total_amount": "1000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/457007402/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/457007402/icon.svg"
+    },
+    "deleted": false
+  },
+  "457205263": {
+    "id": "457205263",
+    "decimals": 2,
+    "name": "AIRSHO Coin",
+    "unit_name": "AIRSHO",
+    "url": "",
+    "total_amount": "270000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/457205263/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/457205263/icon.svg"
+    },
+    "deleted": false
+  },
+  "460300915": {
+    "id": "460300915",
+    "decimals": 4,
+    "name": "LAHAR",
+    "unit_name": "LHR",
+    "url": "",
+    "total_amount": "100000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/460300915/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/460300915/icon.svg"
+    },
+    "deleted": false
+  },
+  "461246798": {
+    "id": "461246798",
+    "decimals": 6,
+    "name": "RUSHCopper",
+    "unit_name": "RUSHCOPR",
+    "url": "",
+    "total_amount": "10000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/461246798/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/461246798/icon.svg"
+    },
+    "deleted": false
+  },
+  "461849439": {
+    "id": "461849439",
+    "decimals": 3,
+    "name": "PariToken",
+    "unit_name": "PARI",
+    "url": "",
+    "total_amount": "1000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/461849439/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/461849439/icon.svg"
+    },
+    "deleted": false
+  },
+  "463554836": {
+    "id": "463554836",
+    "decimals": 6,
+    "name": "AlgoFund",
+    "unit_name": "ALGF",
+    "url": "",
+    "total_amount": "100000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/463554836/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/463554836/icon.svg"
+    },
+    "deleted": false
+  },
+  "465573604": {
+    "id": "465573604",
+    "decimals": 6,
+    "name": "Star Token",
+    "unit_name": "STAR",
+    "url": "",
+    "total_amount": "10000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/465573604/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/465573604/icon.svg"
+    },
+    "deleted": false
+  },
+  "465865291": {
+    "id": "465865291",
+    "decimals": 6,
+    "name": "STBL",
+    "unit_name": "STBL",
+    "url": "",
+    "total_amount": "1000000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/465865291/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/465865291/icon.svg"
+    },
+    "deleted": false
+  },
+  "466716175": {
+    "id": "466716175",
+    "decimals": 0,
+    "name": "Angels Of Ares",
+    "unit_name": "AoA",
+    "url": "",
+    "total_amount": "1000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/466716175/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/466716175/icon.svg"
+    },
+    "deleted": false
+  },
+  "470335962": {
+    "id": "470335962",
+    "decimals": 10,
+    "name": "balgo",
+    "unit_name": "BALGO",
+    "url": "",
+    "total_amount": "20000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/470335962/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/470335962/icon.svg"
+    },
+    "deleted": false
+  },
+  "470842789": {
+    "id": "470842789",
+    "decimals": 6,
+    "name": "Defly Token",
+    "unit_name": "DEFLY",
+    "url": "",
+    "total_amount": "1000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/470842789/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/470842789/icon.svg"
+    },
+    "deleted": false
+  },
+  "471005966": {
+    "id": "471005966",
+    "decimals": 0,
+    "name": "Gogolis Game Token",
+    "unit_name": "GGT",
+    "url": "",
+    "total_amount": "10000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/471005966/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/471005966/icon.svg"
+    },
+    "deleted": false
+  },
+  "473180477": {
+    "id": "473180477",
+    "decimals": 0,
+    "name": "Coffee Beans",
+    "unit_name": "BEAN",
+    "url": "",
+    "total_amount": "10000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/473180477/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/473180477/icon.svg"
+    },
+    "deleted": false
+  },
+  "478549868": {
+    "id": "478549868",
+    "decimals": 0,
+    "name": "BirdBot",
+    "unit_name": "BIRDS",
+    "url": "",
+    "total_amount": "50000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/478549868/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/478549868/icon.svg"
+    },
+    "deleted": false
+  },
+  "487231904": {
+    "id": "487231904",
+    "decimals": 0,
+    "name": "The Grand Token",
+    "unit_name": "Grand",
+    "url": "",
+    "total_amount": "69000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/487231904/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/487231904/icon.svg"
+    },
+    "deleted": false
+  },
+  "498684064": {
+    "id": "498684064",
+    "decimals": 2,
+    "name": "BULO Coin",
+    "unit_name": "BULO",
+    "url": "",
+    "total_amount": "100000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/498684064/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/498684064/icon.svg"
+    },
+    "deleted": false
+  },
+  "509808838": {
+    "id": "509808838",
+    "decimals": 6,
+    "name": "Webblen",
+    "unit_name": "WBLN",
+    "url": "",
+    "total_amount": "1150000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/509808838/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/509808838/icon.svg"
+    },
+    "deleted": false
+  },
+  "510337930": {
+    "id": "510337930",
+    "decimals": 6,
+    "name": "🦴 Bones ASA 🦴",
+    "unit_name": "Bones",
+    "url": "",
+    "total_amount": "1000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/510337930/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/510337930/icon.svg"
+    },
+    "deleted": false
+  },
+  "511484048": {
+    "id": "511484048",
+    "decimals": 2,
+    "name": "AlgoStake",
+    "unit_name": "STKE",
+    "url": "",
+    "total_amount": "100000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/511484048/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/511484048/icon.svg"
+    },
+    "deleted": false
+  },
+  "511491168": {
+    "id": "511491168",
+    "decimals": 2,
+    "name": "CujoToken",
+    "unit_name": "Cujo",
+    "url": "",
+    "total_amount": "100000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/511491168/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/511491168/icon.svg"
+    },
+    "deleted": false
+  },
+  "514670697": {
+    "id": "514670697",
+    "decimals": 0,
+    "name": "Sober",
+    "unit_name": "Sober",
+    "url": "",
+    "total_amount": "780443365",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/514670697/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/514670697/icon.svg"
+    },
+    "deleted": false
+  },
+  "515424632": {
+    "id": "515424632",
+    "decimals": 0,
+    "name": "Algo inu",
+    "unit_name": "Inu",
+    "url": "",
+    "total_amount": "5000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/515424632/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/515424632/icon.svg"
+    },
+    "deleted": false
+  },
+  "518842364": {
+    "id": "518842364",
+    "decimals": 0,
+    "name": "Trilemma 2022",
+    "unit_name": "KABOOM",
+    "url": "",
+    "total_amount": "1000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/518842364/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/518842364/icon.svg"
+    },
+    "deleted": false
+  },
+  "522963891": {
+    "id": "522963891",
+    "decimals": 6,
+    "name": "AlgoPatties",
+    "unit_name": "Patties",
+    "url": "",
+    "total_amount": "1000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/522963891/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/522963891/icon.svg"
+    },
+    "deleted": false
+  },
+  "523605642": {
+    "id": "523605642",
+    "decimals": 5,
+    "name": "SeedBomb",
+    "unit_name": "SEEDS",
+    "url": "",
+    "total_amount": "1000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/523605642/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/523605642/icon.svg"
+    },
+    "deleted": false
+  },
+  "523683256": {
+    "id": "523683256",
+    "decimals": 6,
+    "name": "AKITA INU",
+    "unit_name": "AKTA",
+    "url": "",
+    "total_amount": "1000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/523683256/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/523683256/icon.svg"
+    },
+    "deleted": false
+  },
+  "535221681": {
+    "id": "535221681",
+    "decimals": 6,
+    "name": "MoonX",
+    "unit_name": "MoonX",
+    "url": "",
+    "total_amount": "1000000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/535221681/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/535221681/icon.svg"
+    },
+    "deleted": false
+  },
+  "540605589": {
+    "id": "540605589",
+    "decimals": 6,
+    "name": "AlgoVegas Casino Token",
+    "unit_name": "AVCT",
+    "url": "",
+    "total_amount": "1000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/540605589/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/540605589/icon.svg"
+    },
+    "deleted": false
+  },
+  "542132831": {
+    "id": "542132831",
+    "decimals": 5,
+    "name": "ASA Portfolio",
+    "unit_name": "APF",
+    "url": "",
+    "total_amount": "1000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/542132831/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/542132831/icon.svg"
+    },
+    "deleted": false
+  },
+  "542874179": {
+    "id": "542874179",
+    "decimals": 6,
+    "name": "Freckle",
+    "unit_name": "FRKL",
+    "url": "",
+    "total_amount": "500000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/542874179/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/542874179/icon.svg"
+    },
+    "deleted": false
+  },
+  "544217506": {
+    "id": "544217506",
+    "decimals": 6,
+    "name": "Spindle Yarn",
+    "unit_name": "YARN",
+    "url": "",
+    "total_amount": "100000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/544217506/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/544217506/icon.svg"
+    },
+    "deleted": false
+  },
+  "546713076": {
+    "id": "546713076",
+    "decimals": 6,
+    "name": "Parsec AU",
+    "unit_name": "PRSCau",
+    "url": "",
+    "total_amount": "42545250225000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/546713076/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/546713076/icon.svg"
+    },
+    "deleted": false
+  },
+  "547405153": {
+    "id": "547405153",
+    "decimals": 6,
+    "name": "FairMeme_Algo",
+    "unit_name": "FMA",
+    "url": "",
+    "total_amount": "100000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/547405153/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/547405153/icon.svg"
+    },
+    "deleted": false
+  },
+  "547417573": {
+    "id": "547417573",
+    "decimals": 2,
+    "name": "FairMeme Token",
+    "unit_name": "FMT",
+    "url": "",
+    "total_amount": "100000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/547417573/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/547417573/icon.svg"
+    },
+    "deleted": false
+  },
+  "551903529": {
+    "id": "551903529",
+    "decimals": 6,
+    "name": "TinyLock V1.1",
+    "unit_name": "TinyLock",
+    "url": "",
+    "total_amount": "1000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/551903529/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/551903529/icon.svg"
+    },
+    "deleted": false
+  },
+  "553651951": {
+    "id": "553651951",
+    "decimals": 6,
+    "name": "AlgoPlant",
+    "unit_name": "PLANT",
+    "url": "",
+    "total_amount": "1000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/553651951/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/553651951/icon.svg"
+    },
+    "deleted": false
+  },
+  "554633918": {
+    "id": "554633918",
+    "decimals": 0,
+    "name": "Leaf",
+    "unit_name": "Leaf",
+    "url": "",
+    "total_amount": "4200000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/554633918/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/554633918/icon.svg"
+    },
+    "deleted": false
+  },
+  "555540865": {
+    "id": "555540865",
+    "decimals": 6,
+    "name": "80Acres",
+    "unit_name": "ACRES",
+    "url": "",
+    "total_amount": "8000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/555540865/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/555540865/icon.svg"
+    },
+    "deleted": false
+  },
+  "557132195": {
+    "id": "557132195",
+    "decimals": 4,
+    "name": "AlgoRealm",
+    "unit_name": "REAL",
+    "url": "",
+    "total_amount": "100000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/557132195/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/557132195/icon.svg"
+    },
+    "deleted": false
+  },
+  "558801604": {
+    "id": "558801604",
+    "decimals": 4,
+    "name": "PATRON",
+    "unit_name": "PATRON",
+    "url": "",
+    "total_amount": "100000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/558801604/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/558801604/icon.svg"
+    },
+    "deleted": false
+  },
+  "559219992": {
+    "id": "559219992",
+    "decimals": 6,
+    "name": "Octorand",
+    "unit_name": "OCTO",
+    "url": "",
+    "total_amount": "1000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/559219992/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/559219992/icon.svg"
+    },
+    "deleted": false
+  },
+  "559276904": {
+    "id": "559276904",
+    "decimals": 4,
+    "name": "Green",
+    "unit_name": "GRN",
+    "url": "",
+    "total_amount": "1000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/559276904/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/559276904/icon.svg"
+    },
+    "deleted": false
+  },
+  "560412589": {
+    "id": "560412589",
+    "decimals": 0,
+    "name": "Wasp",
+    "unit_name": "WASP",
+    "url": "",
+    "total_amount": "1000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/560412589/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/560412589/icon.svg"
+    },
+    "deleted": false
+  },
+  "560484052": {
+    "id": "560484052",
+    "decimals": 5,
+    "name": "CanadaMom",
+    "unit_name": "MILF",
+    "url": "",
+    "total_amount": "100000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/560484052/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/560484052/icon.svg"
+    },
+    "deleted": false
+  },
+  "561127431": {
+    "id": "561127431",
+    "decimals": 6,
+    "name": "Joy",
+    "unit_name": "JOY",
+    "url": "",
+    "total_amount": "18000000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/561127431/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/561127431/icon.svg"
+    },
+    "deleted": false
+  },
+  "563579278": {
+    "id": "563579278",
+    "decimals": 12,
+    "name": "DJED",
+    "unit_name": "DJED",
+    "url": "",
+    "total_amount": "1000000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/563579278/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/563579278/icon.svg"
+    },
+    "deleted": false
+  },
+  "567485181": {
+    "id": "567485181",
+    "decimals": 5,
+    "name": "LOUDeFi",
+    "unit_name": "LOUD",
+    "url": "",
+    "total_amount": "50000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/567485181/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/567485181/icon.svg"
+    },
+    "deleted": false
+  },
+  "568835243": {
+    "id": "568835243",
+    "decimals": 0,
+    "name": "LegoMyAlgo",
+    "unit_name": "GoAlgo",
+    "url": "",
+    "total_amount": "10000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/568835243/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/568835243/icon.svg"
+    },
+    "deleted": false
+  },
+  "568879303": {
+    "id": "568879303",
+    "decimals": 9,
+    "name": "Karen Coin",
+    "unit_name": "KRN",
+    "url": "",
+    "total_amount": "999999999000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/568879303/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/568879303/icon.svg"
+    },
+    "deleted": false
+  },
+  "569120128": {
+    "id": "569120128",
+    "decimals": 6,
+    "name": "AlgoScout Token",
+    "unit_name": "SCOUT",
+    "url": "",
+    "total_amount": "1000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/569120128/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/569120128/icon.svg"
+    },
+    "deleted": false
+  },
+  "571576867": {
+    "id": "571576867",
+    "decimals": 6,
+    "name": "Cosmic Gold",
+    "unit_name": "COSG",
+    "url": "",
+    "total_amount": "270000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/571576867/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/571576867/icon.svg"
+    },
+    "deleted": false
+  },
+  "571931588": {
+    "id": "571931588",
+    "decimals": 0,
+    "name": "Neutral Token",
+    "unit_name": "NTR2",
+    "url": "",
+    "total_amount": "1000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/571931588/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/571931588/icon.svg"
+    },
+    "deleted": false
+  },
+  "575353596": {
+    "id": "575353596",
+    "decimals": 2,
+    "name": "Wageroo",
+    "unit_name": "ROO",
+    "url": "",
+    "total_amount": "1000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/575353596/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/575353596/icon.svg"
+    },
+    "deleted": false
+  },
+  "580431573": {
+    "id": "580431573",
+    "decimals": 0,
+    "name": "TrackDefi",
+    "unit_name": "TrackFi",
+    "url": "",
+    "total_amount": "1000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/580431573/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/580431573/icon.svg"
+    },
+    "deleted": false
+  },
+  "585221469": {
+    "id": "585221469",
+    "decimals": 2,
+    "name": "Candle",
+    "unit_name": "CNDL",
+    "url": "",
+    "total_amount": "10000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/585221469/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/585221469/icon.svg"
+    },
+    "deleted": false
+  },
+  "591601798": {
+    "id": "591601798",
+    "decimals": 6,
+    "name": "Fight Token",
+    "unit_name": "FIGHT",
+    "url": "",
+    "total_amount": "10000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/591601798/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/591601798/icon.svg"
+    },
+    "deleted": false
+  },
+  "593826822": {
+    "id": "593826822",
+    "decimals": 9,
+    "name": "MADIBA Coin",
+    "unit_name": "MADIBA",
+    "url": "",
+    "total_amount": "27000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/593826822/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/593826822/icon.svg"
+    },
+    "deleted": false
+  },
+  "601894079": {
+    "id": "601894079",
+    "decimals": 0,
+    "name": "Dark Coin",
+    "unit_name": "DC",
+    "url": "",
+    "total_amount": "500000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/601894079/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/601894079/icon.svg"
+    },
+    "deleted": false
+  },
+  "604221379": {
+    "id": "604221379",
+    "decimals": 2,
+    "name": "Marin County",
+    "unit_name": "MARIN",
+    "url": "",
+    "total_amount": "257900000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/604221379/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/604221379/icon.svg"
+    },
+    "deleted": false
+  },
+  "604643747": {
+    "id": "604643747",
+    "decimals": 6,
+    "name": "ANIRAND",
+    "unit_name": "ANI",
+    "url": "",
+    "total_amount": "500000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/604643747/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/604643747/icon.svg"
+    },
+    "deleted": false
+  },
+  "613608234": {
+    "id": "613608234",
+    "decimals": 9,
+    "name": "Orbital Gnome Strikers",
+    "unit_name": "OGS",
+    "url": "",
+    "total_amount": "1000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/613608234/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/613608234/icon.svg"
+    },
+    "deleted": false
+  },
+  "615093377": {
+    "id": "615093377",
+    "decimals": 6,
+    "name": "Algo Basics",
+    "unit_name": "BASIC",
+    "url": "",
+    "total_amount": "100000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/615093377/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/615093377/icon.svg"
+    },
+    "deleted": false
+  },
+  "639001259": {
+    "id": "639001259",
+    "decimals": 6,
+    "name": "SuperMeow",
+    "unit_name": "SMW",
+    "url": "",
+    "total_amount": "100000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/639001259/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/639001259/icon.svg"
+    },
+    "deleted": false
+  },
+  "640444613": {
+    "id": "640444613",
+    "decimals": 5,
+    "name": "Mario Action Coin",
+    "unit_name": "MAC",
+    "url": "",
+    "total_amount": "1000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/640444613/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/640444613/icon.svg"
+    },
+    "deleted": false
+  },
+  "640873368": {
+    "id": "640873368",
+    "decimals": 4,
+    "name": "Elephant Nips",
+    "unit_name": "NIPS",
+    "url": "",
+    "total_amount": "100000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/640873368/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/640873368/icon.svg"
+    },
+    "deleted": false
+  },
+  "672913181": {
+    "id": "672913181",
+    "decimals": 6,
+    "name": "goUSD",
+    "unit_name": "goUSD",
+    "url": "",
+    "total_amount": "18446744073709552000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/672913181/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/672913181/icon.svg"
+    },
+    "deleted": false
+  },
+  "672923029": {
+    "id": "672923029",
+    "decimals": 6,
+    "name": "goGOLD",
+    "unit_name": "goGOLD",
+    "url": "",
+    "total_amount": "100000000000000000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/672923029/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/672923029/icon.svg"
+    },
+    "deleted": false
+  },
+  "686505742": {
+    "id": "686505742",
+    "decimals": 6,
+    "name": "Folks Algo",
+    "unit_name": "fALGO",
+    "url": "",
+    "total_amount": "18446744073709552000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/686505742/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/686505742/icon.svg"
+    },
+    "deleted": false
+  },
+  "686505743": {
+    "id": "686505743",
+    "decimals": 6,
+    "name": "Folks Rewards Algo",
+    "unit_name": "frALGO",
+    "url": "",
+    "total_amount": "18446744073709552000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/686505743/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/686505743/icon.svg"
+    },
+    "deleted": false
+  },
+  "686508050": {
+    "id": "686508050",
+    "decimals": 6,
+    "name": "Folks USDC",
+    "unit_name": "fUSDC",
+    "url": "",
+    "total_amount": "18446744073709552000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/686508050/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/686508050/icon.svg"
+    },
+    "deleted": false
+  },
+  "686508051": {
+    "id": "686508051",
+    "decimals": 6,
+    "name": "Folks Rewards USDC",
+    "unit_name": "frUSDC",
+    "url": "",
+    "total_amount": "18446744073709552000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/686508051/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/686508051/icon.svg"
+    },
+    "deleted": false
+  },
+  "686509463": {
+    "id": "686509463",
+    "decimals": 6,
+    "name": "Folks Tether USDt",
+    "unit_name": "fUSDt",
+    "url": "",
+    "total_amount": "18446744073709552000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/686509463/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/686509463/icon.svg"
+    },
+    "deleted": false
+  },
+  "686509464": {
+    "id": "686509464",
+    "decimals": 6,
+    "name": "Folks Rewards Tether USDt",
+    "unit_name": "frUSDt",
+    "url": "",
+    "total_amount": "18446744073709552000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/686509464/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/686509464/icon.svg"
+    },
+    "deleted": false
+  },
+  "686510134": {
+    "id": "686510134",
+    "decimals": 8,
+    "name": "Folks goBTC",
+    "unit_name": "fgoBTC",
+    "url": "",
+    "total_amount": "18446744073709552000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/686510134/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/686510134/icon.svg"
+    },
+    "deleted": false
+  },
+  "686510135": {
+    "id": "686510135",
+    "decimals": 8,
+    "name": "Folks Rewards goBTC",
+    "unit_name": "frgoBTC",
+    "url": "",
+    "total_amount": "18446744073709552000",
+    "logo": {
+      "png": "https://asa-list.tinyman.org/assets/686510135/icon.png",
+      "svg": "https://asa-list.tinyman.org/assets/686510135/icon.svg"
+    },
+    "deleted": false
+  }
+};
+},{}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
 require("regenerator-runtime/runtime");
@@ -38107,41 +40580,16 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-//important! comment out bellow before npm publish!!!!!
+var assets = require("./assets.json");
+
+assets = Object.values(assets); //important! comment out bellow before npm publish!!!!!
+
 window.swapDetails = {
   assetid: 0,
   assetid2: 137594422,
   pool: "4QDLMVQORYVMBABY2EXGIVK53TBJWURS4PH2OC2TMOGKSZVMTOA6XHHZE4"
-}; // const screen2 = '<div class="modal-backdrop fade show"></div><div class="modal-dialog"><div class="modal-content-2"><div class="modal-header"><div class="real-modal-title"><h5 class="modal-title" id="exampleModalLiveLabel"><h5 class="algoswap-btn" href="/" aria-label="AlgoSwap"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="28" class="d-block my-1" viewBox="-3 0 48 21" role="img"><title>AlgoSwap</title><path class="ap-lg" d="M185.6,94l-8.8-14.8c0-.1-.1-.1-.2-.2l-.3-.3h0a1.3,1.3,0,0,0-1.7.6s-10.1,19.3-11.2,21.6a.6.6,0,0,0,0,.6,1,1,0,0,0,1,.7h2.5a.9.9,0,0,0,1-.5l7-13.5.2-.2.3-.3a.9.9,0,0,1,1.1.2h.1l4.4,7.4a1.1,1.1,0,0,0,.9.5h2.6a1.6,1.6,0,0,0,1-.5c.3-.4.3-.5.3-.6A2.4,2.4,0,0,0,185.6,94Z" transform="translate(-163.3 -78.6)" fill="currentColor"></path><path class="ap-md" d="M199.2,90.3a6.9,6.9,0,0,0-4.9-2.1h-2.6a2.7,2.7,0,0,1-2.7-2,2.3,2.3,0,0,1,.5-2.1,2.4,2.4,0,0,1,1.9-1h7.1a1.1,1.1,0,0,0,1.1-.6l1-2a1,1,0,0,0-.1-1.2.9.9,0,0,0-1-.7h-9.4a4.6,4.6,0,0,0-3.8,2c-3,3.8-2,7.9.2,10.1a7.1,7.1,0,0,0,4.9,2.1h2.7a2.6,2.6,0,0,1,2.7,2,2.4,2.4,0,0,1-.6,2,2.6,2.6,0,0,1-1.9,1H180.2c-.2.1-.4-.1-.5-.2l-2.6-4.5a1.2,1.2,0,0,0-2.2,0l-3.7,7.4a1.5,1.5,0,0,0,0,1.3,1.1,1.1,0,0,0,1.1.5h23.3a5.8,5.8,0,0,0,3.9-1.9C202.5,96.5,201.4,92.5,199.2,90.3Z" transform="translate(-163.3 -78.6)" fill="currentColor"></path></svg><span class="fs-5"><strong>Algo</strong>Swap</span></h5></div><button id="div-close" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div  p={0} ><div class="higher-header-container"></div><div class="modal-body" id="sure" p={4} pb={1} mb={3}><h3 id="messagioHeadagio">Confirm Action</h3><p id="messagio">Select wallet, then click "Connect"</p></div><div class="flexy" px={1}><div class="algo-flex" align="center"><div id="shhh"><div class="modal-footer"><div class="dropdown"><select class="form-select form-select-lg" aria-label=".form-select-lg example" id="walletswitch"><option>myAlgoWallet</option><option disabled>WalletConnect</option><option disabled>AlgoSigner</option></select></div><button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="div-close-2">Close</button><button onclick="connect()" id="algobutton" type="button" class="btn btn-primary">Connect</button></div><div class="modal-footer-cr"><div class="footer-link-ink" >2021 HEADLINE INC.</div><div>Powered by <a class="footer-link" href="https://www.pipeline-ui.com" target="_blank" rel="noopener noreferrer">PIPELINE-UI</a><a class="footer-link-2" href="mailto:contact@headline-inc.com" target="_blank" rel="noopener noreferrer">Contact</a></div></div></div></div></div></div></div>'
-// document.getElementById("swap-root").innerHTML =
-//   '<div align="center"><div class="algoswap-box"><button class=" btn btn-primary btn-lg d-inline-flex align-items-center mb-2 link-dark text-decoration-none" id="algoswap-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setOpen()" href="/" aria-label="Bootstrap"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="30" class="d-block my-1" viewBox="-4 0 48 21" role="img"><title>AlgoSwap</title><path class="ap-lg" d="M185.6,94l-8.8-14.8c0-.1-.1-.1-.2-.2l-.3-.3h0a1.3,1.3,0,0,0-1.7.6s-10.1,19.3-11.2,21.6a.6.6,0,0,0,0,.6,1,1,0,0,0,1,.7h2.5a.9.9,0,0,0,1-.5l7-13.5.2-.2.3-.3a.9.9,0,0,1,1.1.2h.1l4.4,7.4a1.1,1.1,0,0,0,.9.5h2.6a1.6,1.6,0,0,0,1-.5c.3-.4.3-.5.3-.6A2.4,2.4,0,0,0,185.6,94Z" transform="translate(-163.3 -78.6)" fill="currentColor"></path><path class="ap-md" d="M199.2,90.3a6.9,6.9,0,0,0-4.9-2.1h-2.6a2.7,2.7,0,0,1-2.7-2,2.3,2.3,0,0,1,.5-2.1,2.4,2.4,0,0,1,1.9-1h7.1a1.1,1.1,0,0,0,1.1-.6l1-2a1,1,0,0,0-.1-1.2.9.9,0,0,0-1-.7h-9.4a4.6,4.6,0,0,0-3.8,2c-3,3.8-2,7.9.2,10.1a7.1,7.1,0,0,0,4.9,2.1h2.7a2.6,2.6,0,0,1,2.7,2,2.4,2.4,0,0,1-.6,2,2.6,2.6,0,0,1-1.9,1H180.2c-.2.1-.4-.1-.5-.2l-2.6-4.5a1.2,1.2,0,0,0-2.2,0l-3.7,7.4a1.5,1.5,0,0,0,0,1.3,1.1,1.1,0,0,0,1.1.5h23.3a5.8,5.8,0,0,0,3.9-1.9C202.5,96.5,201.4,92.5,199.2,90.3Z" transform="translate(-163.3 -78.6)" fill="currentColor"></path></svg><span class="fs-5"><strong>Algo</strong>Swap</span></button>'
-//   +
-//   '</div><div id ="firstdiv" style="display: none" class="modal fade">'
-//   + screen2 +
-//   '<div id="sendscreen" style="display: none"><div id="tablevis" class="modal-body" style="display: none"><h3 id="messagioHeadagio">Complete Swap</h3><p id="messagio">Please sign & send swap transactions</p><div class="bd-callout my-0"><div class="toast-header"><svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#4550e6">  <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/><path d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"/></rect></svg><strong class="me-auto">TXN Summary</strong><snoopy-small small><p id="date"></p></small></div><div class="snoopy-box-boxed"><strong>My Address:&nbsp</strong><p id="snoopy"></p></div><div class="snoopy-box-2"><div class="snoops"><div id="inputAmount" style="display:none"></div><div id="inputs" align="right"><div class="snoops-2"><label class="form-label">Input Asset ID:</label><p id="input-readonly">0</p></div><div class="snoops-2"><label class="form-label">Output Asset ID:</label><p id="output-readonly">0</p></div><div class="snoops-2"><label class="form-label">Amount:</label><input id="amount" class="form-control" type="number" value=1 /></div><br><div class="snoops-2"><label class="form-label">Slippage:</label></div><div class="slidecontainer"><div class="slippage-2"><input id="slip" class="slider" type="range" min=1 value=5 max=50 /><label class="form-label-1" id="slipview">0.05</label></div></div><br><div class="snoops-2"><h6 class="snoopy-6">Quote:</h6><p id="quote"></p></div></div></div></div></div><div p="{0}"><div class="higher-header-container"></div><div class="flexy" px="{1}"><div class="algo-flex" align="center"><div id="shhh"><div class="modal-footer"><button id="swapbutton" class="w-100 py-2 mb-2 btn btn-primary rounded-4">Swap</button><button type="button" class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4" data-bs-dismiss="modal" id="div-close-3">Cancel</button></div><div class="modal-footer-cr"><div class="footer-link-ink" >2021 HEADLINE INC.</div><div>Powered by <a class="footer-link" href="https://www.pipeline-ui.com" target="_blank" rel="noopener noreferrer">PIPELINE-UI</a><a class="footer-link-2" href="mailto:contact@headline-inc.com" target="_blank" rel="noopener noreferrer">Contact</a></div></div></div></div></div></div></h3></div><div id="algoflex3" style="display:none" ><div p="{0}"><div class="higher-header-container"></div><div class="modal-body" id="sure" p="{4}" pb="{1}" mb="{3}"><h3 id="messagioHeadagio">Transaction Away!</h3><p id="messagio">Would you like to track your swap transactions?</p></div><div class="flexy" px="{1}"><div class="algo-flex" align="center"><div id="shhh"><div class="modal-footer"><div class="w-100 alert alert-primary d-flex align-items-center" role="alert"><svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg><div class="le-flash" my={3} variant="info"><div class="snoopy-box-4"><p class="text-progress">Check progress on</p><a id="algolink" class="algoexplorer"> AlgoExplorer</a></div></div></div></div><div></div></div></div><p>To redeem excess amounts, visit <a href="https://app.tinyman.org/#/redeem-excess-amounts">Tinyman</a></p><div class="modal-footer-cr"><div class="footer-link-ink" >2021 HEADLINE INC.</div><div>Powered by <a class="footer-link" href="https://www.pipeline-ui.com" target="_blank" rel="noopener noreferrer">PIPELINE-UI</a><a class="footer-link-2" href="mailto:contact@headline-inc.com" target="_blank" rel="noopener noreferrer">Contact</a></div></div></div></div></div></div></div ></div></div><div class="footer primary"></div></div></div></div></div></div></div></div></div><svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/></symbol><symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/></symbol><symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></symbol></svg>';
-
+};
 var indexerURL = "https://algoexplorerapi.io/idx2/v2/accounts/";
-/* if (window.details !== undefined) {
-  var index = parseInt(window.details.index);
-  var amount = window.details.amount;
-  var note = window.details.note;
-  var recipient = window.details.recipient;
-} else {
-  window.details = {
-    index: parseInt(31566704),
-    amount: 0,
-    note: "",
-    recipient: "K3NSXYMHPRCK7PMYT3QUQXUGPZJ4MKWJXW2HJRYPVMQUMKJAOJEIEO4HK4",
-    input: true
-  }
-  var amount = window.details.amount;
-  var index = window.details.index;
-  var note = window.details.note;
-  var recipient = "K3NSXYMHPRCK7PMYT3QUQXUGPZJ4MKWJXW2HJRYPVMQUMKJAOJEIEO4HK4"; // Default address is set to HDL seed address. Please update recipient to your address before deploying.//
-}
-
-*/
-
 var state = {
   update: false,
   asaIndVis: "none",
@@ -38297,10 +40745,44 @@ document.getElementById("div-close").onclick = close;
 document.getElementById("div-close-2").onclick = close;
 document.getElementById("div-close-3").onclick = close;
 document.getElementById("algobutton").onclick = connect;
-/*if (window.details.input !== false) {
-  document.getElementById("inputAmount").innerHTML = '<input id="amountInputter" class="form-control" type="number" value="0"/>'
-  document.getElementById("amountInputter").onchange = inputChanged
-}*/
+
+document.getElementById("from-currency").onclick = function () {
+  return showAssetList("from");
+};
+
+document.getElementById("to-currency").onclick = function () {
+  return showAssetList("to");
+};
+
+function selectAsset(arrow, assetid) {
+  console.log("++++++++++++++", assetid, arrow);
+  document.getElementById("assetlist").style.display = "none";
+  document.getElementById("sendscreen").style.display = "block";
+
+  if (arrow === "from") {
+    asset_id = parseInt(assetid);
+  } else if (arrow === "to") {
+    asset_id2 = parseInt(assetid);
+  }
+
+  handleChange();
+}
+
+function showAssetList(arrow) {
+  var lists = '<ul class="list">';
+  assets.forEach(function (asset) {
+    lists += "<li class=\"list-item asset-list-item\"><div role=\"button\" class=\"list-item__click-wrapper\" id=\"asset-item-".concat(asset.id, "\"><div class=\"is-vertically-centered has-space-between wrap-flex asset-list-item-detail\"><div class=\"is-vertically-centered asset-name-with-logo-and-unit asset-list-item-detail__asset-name-with-logo-and-unit\"><img class=\"asset-logo\" src=\"").concat(asset.logo.png, "\" alt=\"").concat(asset.name, "\"></img><div class=\"asset-name-with-logo-and-unit__name-and-unit\"><div class=\"is-vertically-centered asset-name\"><div data-testid=\"AssetList.other-assets.item-0.AssetNameWithLogoAndUnit.AssetName.name\" class=\"is-truncated-text typography--body is-bold-text is-truncated-text has-text-main-color\">").concat(asset.name, "</div></div><p data-testid=\"AssetList.other-assets.item-0.AssetNameWithLogoAndUnit.asset-unit-and-id\" class=\"typography--secondary-body has-text-gray-color\">").concat(asset.unit_name, "</p></div></div></div></div></li>");
+  });
+  lists += '</ul>';
+  document.getElementById("asset-list").innerHTML = lists;
+  document.getElementById("sendscreen").style.display = "none";
+  document.getElementById("assetlist").style.display = "block";
+  assets.forEach(function (asset) {
+    document.getElementById("asset-item-".concat(asset.id)).onclick = function () {
+      return selectAsset(arrow, asset.id);
+    };
+  });
+}
 
 function inputChanged() {
   amount = document.getElementById("amountInputter").value;
@@ -38315,9 +40797,7 @@ function showDate() {
   document.getElementById("date").innerText = m + "/" + d + "/" + y;
 }
 
-showDate(); //if (window.details.input === true) {document.getElementById ("inputAmount").style.display = "block"}
-//begin logicsig code
-
+showDate();
 var definition = {
   "bytecode": "BCAIAQCBgICAgICAgPABgICAgICAgIDwAQMEBQYlJA1EMQkyAxJEMRUyAxJEMSAyAxJEMgQiDUQzAQAxABJEMwEQIQcSRDMBGIGCgICAgICAgPABEkQzARkiEjMBGyEEEhA3ARoAgAlib290c3RyYXASEEAAXDMBGSMSRDMBG4ECEjcBGgCABHN3YXASEEACOzMBGyISRDcBGgCABG1pbnQSQAE7NwEaAIAEYnVybhJAAZg3ARoAgAZyZWRlZW0SQAJbNwEaAIAEZmVlcxJAAnkAIQYhBSQjEk0yBBJENwEaARclEjcBGgIXJBIQRDMCADEAEkQzAhAhBBJEMwIhIxJEMwIiIxwSRDMCIyEHEkQzAiQjEkQzAiWACFRNUE9PTDExEkQzAiZRAA+AD1RpbnltYW5Qb29sMS4xIBJEMwIngBNodHRwczovL3RpbnltYW4ub3JnEkQzAikyAxJEMwIqMgMSRDMCKzIDEkQzAiwyAxJEMwMAMQASRDMDECEFEkQzAxElEkQzAxQxABJEMwMSIxJEJCMTQAAQMwEBMwIBCDMDAQg1AUIBsTMEADEAEkQzBBAhBRJEMwQRJBJEMwQUMQASRDMEEiMSRDMBATMCAQgzAwEIMwQBCDUBQgF8MgQhBhJENwEcATEAE0Q3ARwBMwQUEkQzAgAxABNEMwIUMQASRDMDADMCABJEMwIRJRJEMwMUMwMHMwMQIhJNMQASRDMDESMzAxAiEk0kEkQzBAAxABJEMwQUMwIAEkQzAQEzBAEINQFCAREyBCEGEkQ3ARwBMQATRDcBHAEzAhQSRDMDFDMDBzMDECISTTcBHAESRDMCADEAEkQzAhQzBAASRDMCESUSRDMDADEAEkQzAxQzAwczAxAiEk0zBAASRDMDESMzAxAiEk0kEkQzBAAxABNEMwQUMQASRDMBATMCAQgzAwEINQFCAJAyBCEFEkQ3ARwBMQATRDMCADcBHAESRDMCADEAE0QzAwAxABJEMwIUMwIHMwIQIhJNMQASRDMDFDMDBzMDECISTTMCABJEMwEBMwMBCDUBQgA+MgQhBBJENwEcATEAE0QzAhQzAgczAhAiEk03ARwBEkQzAQEzAgEINQFCABIyBCEEEkQzAQEzAgEINQFCAAAzAAAxABNEMwAHMQASRDMACDQBD0M=",
   "address": "ABUKAXTANWR6K6ZYV75DWJEPVWWOU6SFUVRI6QHO44E4SIDLHBTD2CZ64A",
@@ -38601,12 +41081,12 @@ function getZeros(_x2, _x3) {
 
 function _getZeros() {
   _getZeros = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee5(index, isInput) {
-    var iamount, url2, asaname, _asaname;
-
+    var iamount, url2;
     return regeneratorRuntime.wrap(function _callee5$(_context5) {
       while (1) {
         switch (_context5.prev = _context5.next) {
           case 0:
+            console.log("++++++++++++++++++++++", index);
             iamount = 1000000;
 
             if (index !== 0) {
@@ -38627,13 +41107,11 @@ function _getZeros() {
 
                 if (isInput) {
                   asset_name = data.asset.params["unit-name"];
-                  zerosIN = iamount; // let asaname = (asset_id === 0) ? "" : asset_id;
-
+                  zerosIN = iamount;
                   document.getElementById("from-currency").innerText = asset_name;
                 } else {
                   asset_name2 = data.asset.params["unit-name"];
-                  zerosOut = iamount; // let asaname = (asset_id2 === 0) ? "" : asset_id2;
-
+                  zerosOut = iamount;
                   document.getElementById("to-currency").innerText = asset_name2;
                 }
               }).catch(function () {
@@ -38643,17 +41121,15 @@ function _getZeros() {
               if (isInput) {
                 asset_name = "Algo";
                 zerosIN = 1000000;
-                asaname = asset_id === 0 ? "" : asset_id;
-                document.getElementById("from-currency").innerText = asaname + " " + "Algo";
+                document.getElementById("from-currency").innerText = "Algo";
               } else {
                 asset_name2 = "Algo";
                 zerosOut = 1000000;
-                _asaname = asset_id2 === 0 ? "" : asset_id2;
-                document.getElementById("to-currency").innerText = _asaname + " " + "Algo";
+                document.getElementById("to-currency").innerText = "Algo";
               }
             }
 
-          case 2:
+          case 3:
           case "end":
             return _context5.stop();
         }
@@ -38686,8 +41162,7 @@ function convertInput() {
 }
 
 getZeros(asset_id, true);
-getZeros(asset_id2, false); //prepareSig();
-
+getZeros(asset_id2, false);
 handleChange();
 var txid = "";
 
@@ -38749,7 +41224,7 @@ function _connect2() {
             myAlgoWallet.connect().then(function (data) {
               user_address = data[0].address;
               document.getElementById("snoopy").innerText = user_address;
-            }); //const addresses = accounts.map(account => account.address);
+            });
 
           case 1:
           case "end":
@@ -38762,10 +41237,7 @@ function _connect2() {
 }
 
 function handleChange() {
-  document.getElementById("to-amount").value = ""; // asset_id = parseInt(document.getElementById("input").value);
-  // asset_id2 = parseInt(document.getElementById("output").value);
-  // pool = document.getElementById("pool").value;
-
+  document.getElementById("to-amount").value = "";
   var slipPercent = document.getElementById("slip").value / 100;
   slippage = slipPercent;
   document.getElementById("slipview").innerText = slipPercent;
@@ -38779,14 +41251,12 @@ function handleChange() {
   getZeros(asset_id, true).then(function () {
     getZeros(asset_id2, false).then(function () {
       getPoolInfo(pool).then(function (data) {
-        var end = asset_name2;
-        document.getElementById("to-amount").value = " " + (data / zerosOut * (1 - slippage)).toFixed(2) + " " + end;
+        document.getElementById("to-amount").value = " " + (data / zerosOut * (1 - slippage)).toFixed(2);
       });
     });
   });
-} //document.getElementById ("pool-readonly").innerText = pool
-//end swap code
-},{"regenerator-runtime/runtime":"node_modules/regenerator-runtime/runtime.js","algosdk":"node_modules/algosdk/dist/browser/algosdk.min.js","@randlabs/myalgo-connect":"node_modules/@randlabs/myalgo-connect/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+} //end swap code
+},{"regenerator-runtime/runtime":"node_modules/regenerator-runtime/runtime.js","algosdk":"node_modules/algosdk/dist/browser/algosdk.min.js","@randlabs/myalgo-connect":"node_modules/@randlabs/myalgo-connect/index.js","./assets.json":"src/assets.json"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -38814,7 +41284,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44839" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43657" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

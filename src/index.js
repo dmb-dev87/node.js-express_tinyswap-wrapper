@@ -2,44 +2,18 @@ import 'regenerator-runtime/runtime'
 import algosdk from 'algosdk';
 import MyAlgoConnect from '@randlabs/myalgo-connect';
 
+var assets = require("./assets.json");
+assets = Object.values(assets);
+
 //important! comment out bellow before npm publish!!!!!
-window.swapDetails = {assetid: 0,
+window.swapDetails = {
+  assetid: 0,
   assetid2: 137594422,
   pool: "4QDLMVQORYVMBABY2EXGIVK53TBJWURS4PH2OC2TMOGKSZVMTOA6XHHZE4"
 }
 
 
-// const screen2 = '<div class="modal-backdrop fade show"></div><div class="modal-dialog"><div class="modal-content-2"><div class="modal-header"><div class="real-modal-title"><h5 class="modal-title" id="exampleModalLiveLabel"><h5 class="algoswap-btn" href="/" aria-label="AlgoSwap"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="28" class="d-block my-1" viewBox="-3 0 48 21" role="img"><title>AlgoSwap</title><path class="ap-lg" d="M185.6,94l-8.8-14.8c0-.1-.1-.1-.2-.2l-.3-.3h0a1.3,1.3,0,0,0-1.7.6s-10.1,19.3-11.2,21.6a.6.6,0,0,0,0,.6,1,1,0,0,0,1,.7h2.5a.9.9,0,0,0,1-.5l7-13.5.2-.2.3-.3a.9.9,0,0,1,1.1.2h.1l4.4,7.4a1.1,1.1,0,0,0,.9.5h2.6a1.6,1.6,0,0,0,1-.5c.3-.4.3-.5.3-.6A2.4,2.4,0,0,0,185.6,94Z" transform="translate(-163.3 -78.6)" fill="currentColor"></path><path class="ap-md" d="M199.2,90.3a6.9,6.9,0,0,0-4.9-2.1h-2.6a2.7,2.7,0,0,1-2.7-2,2.3,2.3,0,0,1,.5-2.1,2.4,2.4,0,0,1,1.9-1h7.1a1.1,1.1,0,0,0,1.1-.6l1-2a1,1,0,0,0-.1-1.2.9.9,0,0,0-1-.7h-9.4a4.6,4.6,0,0,0-3.8,2c-3,3.8-2,7.9.2,10.1a7.1,7.1,0,0,0,4.9,2.1h2.7a2.6,2.6,0,0,1,2.7,2,2.4,2.4,0,0,1-.6,2,2.6,2.6,0,0,1-1.9,1H180.2c-.2.1-.4-.1-.5-.2l-2.6-4.5a1.2,1.2,0,0,0-2.2,0l-3.7,7.4a1.5,1.5,0,0,0,0,1.3,1.1,1.1,0,0,0,1.1.5h23.3a5.8,5.8,0,0,0,3.9-1.9C202.5,96.5,201.4,92.5,199.2,90.3Z" transform="translate(-163.3 -78.6)" fill="currentColor"></path></svg><span class="fs-5"><strong>Algo</strong>Swap</span></h5></div><button id="div-close" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div  p={0} ><div class="higher-header-container"></div><div class="modal-body" id="sure" p={4} pb={1} mb={3}><h3 id="messagioHeadagio">Confirm Action</h3><p id="messagio">Select wallet, then click "Connect"</p></div><div class="flexy" px={1}><div class="algo-flex" align="center"><div id="shhh"><div class="modal-footer"><div class="dropdown"><select class="form-select form-select-lg" aria-label=".form-select-lg example" id="walletswitch"><option>myAlgoWallet</option><option disabled>WalletConnect</option><option disabled>AlgoSigner</option></select></div><button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="div-close-2">Close</button><button onclick="connect()" id="algobutton" type="button" class="btn btn-primary">Connect</button></div><div class="modal-footer-cr"><div class="footer-link-ink" >2021 HEADLINE INC.</div><div>Powered by <a class="footer-link" href="https://www.pipeline-ui.com" target="_blank" rel="noopener noreferrer">PIPELINE-UI</a><a class="footer-link-2" href="mailto:contact@headline-inc.com" target="_blank" rel="noopener noreferrer">Contact</a></div></div></div></div></div></div></div>'
-// document.getElementById("swap-root").innerHTML =
-//   '<div align="center"><div class="algoswap-box"><button class=" btn btn-primary btn-lg d-inline-flex align-items-center mb-2 link-dark text-decoration-none" id="algoswap-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setOpen()" href="/" aria-label="Bootstrap"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="30" class="d-block my-1" viewBox="-4 0 48 21" role="img"><title>AlgoSwap</title><path class="ap-lg" d="M185.6,94l-8.8-14.8c0-.1-.1-.1-.2-.2l-.3-.3h0a1.3,1.3,0,0,0-1.7.6s-10.1,19.3-11.2,21.6a.6.6,0,0,0,0,.6,1,1,0,0,0,1,.7h2.5a.9.9,0,0,0,1-.5l7-13.5.2-.2.3-.3a.9.9,0,0,1,1.1.2h.1l4.4,7.4a1.1,1.1,0,0,0,.9.5h2.6a1.6,1.6,0,0,0,1-.5c.3-.4.3-.5.3-.6A2.4,2.4,0,0,0,185.6,94Z" transform="translate(-163.3 -78.6)" fill="currentColor"></path><path class="ap-md" d="M199.2,90.3a6.9,6.9,0,0,0-4.9-2.1h-2.6a2.7,2.7,0,0,1-2.7-2,2.3,2.3,0,0,1,.5-2.1,2.4,2.4,0,0,1,1.9-1h7.1a1.1,1.1,0,0,0,1.1-.6l1-2a1,1,0,0,0-.1-1.2.9.9,0,0,0-1-.7h-9.4a4.6,4.6,0,0,0-3.8,2c-3,3.8-2,7.9.2,10.1a7.1,7.1,0,0,0,4.9,2.1h2.7a2.6,2.6,0,0,1,2.7,2,2.4,2.4,0,0,1-.6,2,2.6,2.6,0,0,1-1.9,1H180.2c-.2.1-.4-.1-.5-.2l-2.6-4.5a1.2,1.2,0,0,0-2.2,0l-3.7,7.4a1.5,1.5,0,0,0,0,1.3,1.1,1.1,0,0,0,1.1.5h23.3a5.8,5.8,0,0,0,3.9-1.9C202.5,96.5,201.4,92.5,199.2,90.3Z" transform="translate(-163.3 -78.6)" fill="currentColor"></path></svg><span class="fs-5"><strong>Algo</strong>Swap</span></button>'
-//   +
-//   '</div><div id ="firstdiv" style="display: none" class="modal fade">'
-//   + screen2 +
-
-//   '<div id="sendscreen" style="display: none"><div id="tablevis" class="modal-body" style="display: none"><h3 id="messagioHeadagio">Complete Swap</h3><p id="messagio">Please sign & send swap transactions</p><div class="bd-callout my-0"><div class="toast-header"><svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#4550e6">  <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/><path d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"/></rect></svg><strong class="me-auto">TXN Summary</strong><snoopy-small small><p id="date"></p></small></div><div class="snoopy-box-boxed"><strong>My Address:&nbsp</strong><p id="snoopy"></p></div><div class="snoopy-box-2"><div class="snoops"><div id="inputAmount" style="display:none"></div><div id="inputs" align="right"><div class="snoops-2"><label class="form-label">Input Asset ID:</label><p id="input-readonly">0</p></div><div class="snoops-2"><label class="form-label">Output Asset ID:</label><p id="output-readonly">0</p></div><div class="snoops-2"><label class="form-label">Amount:</label><input id="amount" class="form-control" type="number" value=1 /></div><br><div class="snoops-2"><label class="form-label">Slippage:</label></div><div class="slidecontainer"><div class="slippage-2"><input id="slip" class="slider" type="range" min=1 value=5 max=50 /><label class="form-label-1" id="slipview">0.05</label></div></div><br><div class="snoops-2"><h6 class="snoopy-6">Quote:</h6><p id="quote"></p></div></div></div></div></div><div p="{0}"><div class="higher-header-container"></div><div class="flexy" px="{1}"><div class="algo-flex" align="center"><div id="shhh"><div class="modal-footer"><button id="swapbutton" class="w-100 py-2 mb-2 btn btn-primary rounded-4">Swap</button><button type="button" class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4" data-bs-dismiss="modal" id="div-close-3">Cancel</button></div><div class="modal-footer-cr"><div class="footer-link-ink" >2021 HEADLINE INC.</div><div>Powered by <a class="footer-link" href="https://www.pipeline-ui.com" target="_blank" rel="noopener noreferrer">PIPELINE-UI</a><a class="footer-link-2" href="mailto:contact@headline-inc.com" target="_blank" rel="noopener noreferrer">Contact</a></div></div></div></div></div></div></h3></div><div id="algoflex3" style="display:none" ><div p="{0}"><div class="higher-header-container"></div><div class="modal-body" id="sure" p="{4}" pb="{1}" mb="{3}"><h3 id="messagioHeadagio">Transaction Away!</h3><p id="messagio">Would you like to track your swap transactions?</p></div><div class="flexy" px="{1}"><div class="algo-flex" align="center"><div id="shhh"><div class="modal-footer"><div class="w-100 alert alert-primary d-flex align-items-center" role="alert"><svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg><div class="le-flash" my={3} variant="info"><div class="snoopy-box-4"><p class="text-progress">Check progress on</p><a id="algolink" class="algoexplorer"> AlgoExplorer</a></div></div></div></div><div></div></div></div><p>To redeem excess amounts, visit <a href="https://app.tinyman.org/#/redeem-excess-amounts">Tinyman</a></p><div class="modal-footer-cr"><div class="footer-link-ink" >2021 HEADLINE INC.</div><div>Powered by <a class="footer-link" href="https://www.pipeline-ui.com" target="_blank" rel="noopener noreferrer">PIPELINE-UI</a><a class="footer-link-2" href="mailto:contact@headline-inc.com" target="_blank" rel="noopener noreferrer">Contact</a></div></div></div></div></div></div></div ></div></div><div class="footer primary"></div></div></div></div></div></div></div></div></div><svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/></symbol><symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/></symbol><symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></symbol></svg>';
-
 var indexerURL = "https://algoexplorerapi.io/idx2/v2/accounts/";
-
-/* if (window.details !== undefined) {
-  var index = parseInt(window.details.index);
-  var amount = window.details.amount;
-  var note = window.details.note;
-  var recipient = window.details.recipient;
-} else {
-  window.details = {
-    index: parseInt(31566704),
-    amount: 0,
-    note: "",
-    recipient: "K3NSXYMHPRCK7PMYT3QUQXUGPZJ4MKWJXW2HJRYPVMQUMKJAOJEIEO4HK4",
-    input: true
-  }
-  var amount = window.details.amount;
-  var index = window.details.index;
-  var note = window.details.note;
-  var recipient = "K3NSXYMHPRCK7PMYT3QUQXUGPZJ4MKWJXW2HJRYPVMQUMKJAOJEIEO4HK4"; // Default address is set to HDL seed address. Please update recipient to your address before deploying.//
-}
-
-*/
 
 const state = {
   update: false,
@@ -159,18 +133,44 @@ function switchConnector(event) {
 }
 
 document.getElementById("walletswitch").onchange = switchConnector
-
-
 document.getElementById("algoswap-btn").onclick = setOpen;
 document.getElementById("div-close").onclick = close;
 document.getElementById("div-close-2").onclick = close;
 document.getElementById("div-close-3").onclick = close;
 document.getElementById("algobutton").onclick = connect;
+document.getElementById("from-currency").onclick = () => showAssetList("from");
+document.getElementById("to-currency").onclick = () => showAssetList("to");
 
-/*if (window.details.input !== false) {
-  document.getElementById("inputAmount").innerHTML = '<input id="amountInputter" class="form-control" type="number" value="0"/>'
-  document.getElementById("amountInputter").onchange = inputChanged
-}*/
+function selectAsset(arrow, assetid) {
+  console.log("++++++++++++++", assetid, arrow);
+  document.getElementById("assetlist").style.display = "none";
+  document.getElementById("sendscreen").style.display = "block";
+
+  if (arrow === "from") {
+    asset_id = parseInt(assetid);
+  } else if (arrow === "to") {
+    asset_id2 = parseInt(assetid);
+  }
+
+  handleChange();
+}
+
+function showAssetList(arrow) {
+  var lists = '<ul class="list">';
+  assets.forEach((asset) => {
+    lists += `<li class="list-item asset-list-item"><div role="button" class="list-item__click-wrapper" id="asset-item-${asset.id}"><div class="is-vertically-centered has-space-between wrap-flex asset-list-item-detail"><div class="is-vertically-centered asset-name-with-logo-and-unit asset-list-item-detail__asset-name-with-logo-and-unit"><img class="asset-logo" src="${asset.logo.png}" alt="${asset.name}"></img><div class="asset-name-with-logo-and-unit__name-and-unit"><div class="is-vertically-centered asset-name"><div data-testid="AssetList.other-assets.item-0.AssetNameWithLogoAndUnit.AssetName.name" class="is-truncated-text typography--body is-bold-text is-truncated-text has-text-main-color">${asset.name}</div></div><p data-testid="AssetList.other-assets.item-0.AssetNameWithLogoAndUnit.asset-unit-and-id" class="typography--secondary-body has-text-gray-color">${asset.unit_name}</p></div></div></div></div></li>`;  
+  })
+  lists += '</ul>';
+  
+  document.getElementById("asset-list").innerHTML = lists;
+
+  document.getElementById("sendscreen").style.display = "none";
+  document.getElementById("assetlist").style.display = "block";
+
+  assets.forEach((asset) => {
+    document.getElementById(`asset-item-${asset.id}`).onclick = () => selectAsset(arrow, asset.id);
+  })
+}
 
 function inputChanged() {
   amount = document.getElementById("amountInputter").value;
@@ -186,10 +186,6 @@ function showDate() {
 }
 
 showDate();
-
-//if (window.details.input === true) {document.getElementById ("inputAmount").style.display = "block"}
-
-//begin logicsig code
 
 const definition = {
   "bytecode": "BCAIAQCBgICAgICAgPABgICAgICAgIDwAQMEBQYlJA1EMQkyAxJEMRUyAxJEMSAyAxJEMgQiDUQzAQAxABJEMwEQIQcSRDMBGIGCgICAgICAgPABEkQzARkiEjMBGyEEEhA3ARoAgAlib290c3RyYXASEEAAXDMBGSMSRDMBG4ECEjcBGgCABHN3YXASEEACOzMBGyISRDcBGgCABG1pbnQSQAE7NwEaAIAEYnVybhJAAZg3ARoAgAZyZWRlZW0SQAJbNwEaAIAEZmVlcxJAAnkAIQYhBSQjEk0yBBJENwEaARclEjcBGgIXJBIQRDMCADEAEkQzAhAhBBJEMwIhIxJEMwIiIxwSRDMCIyEHEkQzAiQjEkQzAiWACFRNUE9PTDExEkQzAiZRAA+AD1RpbnltYW5Qb29sMS4xIBJEMwIngBNodHRwczovL3RpbnltYW4ub3JnEkQzAikyAxJEMwIqMgMSRDMCKzIDEkQzAiwyAxJEMwMAMQASRDMDECEFEkQzAxElEkQzAxQxABJEMwMSIxJEJCMTQAAQMwEBMwIBCDMDAQg1AUIBsTMEADEAEkQzBBAhBRJEMwQRJBJEMwQUMQASRDMEEiMSRDMBATMCAQgzAwEIMwQBCDUBQgF8MgQhBhJENwEcATEAE0Q3ARwBMwQUEkQzAgAxABNEMwIUMQASRDMDADMCABJEMwIRJRJEMwMUMwMHMwMQIhJNMQASRDMDESMzAxAiEk0kEkQzBAAxABJEMwQUMwIAEkQzAQEzBAEINQFCAREyBCEGEkQ3ARwBMQATRDcBHAEzAhQSRDMDFDMDBzMDECISTTcBHAESRDMCADEAEkQzAhQzBAASRDMCESUSRDMDADEAEkQzAxQzAwczAxAiEk0zBAASRDMDESMzAxAiEk0kEkQzBAAxABNEMwQUMQASRDMBATMCAQgzAwEINQFCAJAyBCEFEkQ3ARwBMQATRDMCADcBHAESRDMCADEAE0QzAwAxABJEMwIUMwIHMwIQIhJNMQASRDMDFDMDBzMDECISTTMCABJEMwEBMwMBCDUBQgA+MgQhBBJENwEcATEAE0QzAhQzAgczAhAiEk03ARwBEkQzAQEzAgEINQFCABIyBCEEEkQzAQEzAgEINQFCAAAzAAAxABNEMwAHMQASRDMACDQBD0M=",
@@ -463,6 +459,7 @@ function _base64ToArrayBuffer(base64) {
 }
 
 async function getZeros(index, isInput) {
+  console.log("++++++++++++++++++++++", index);
   let iamount = 1000000;
   if (index !== 0) {
     let url2 = "https://algoexplorerapi.io/idx2/v2/assets/" + index;
@@ -480,13 +477,11 @@ async function getZeros(index, isInput) {
         if (isInput) {
           asset_name = data.asset.params["unit-name"];
           zerosIN = iamount;
-          // let asaname = (asset_id === 0) ? "" : asset_id;
           document.getElementById("from-currency").innerText = asset_name
         }
         else {
           asset_name2 = data.asset.params["unit-name"]
           zerosOut = iamount;
-          // let asaname = (asset_id2 === 0) ? "" : asset_id2;
           document.getElementById("to-currency").innerText = asset_name2
         }
       })
@@ -497,14 +492,12 @@ async function getZeros(index, isInput) {
     if (isInput) {
       asset_name = "Algo";
       zerosIN = 1000000;
-      let asaname = (asset_id === 0) ? "" : asset_id;
-      document.getElementById("from-currency").innerText = asaname + " " + "Algo"
+      document.getElementById("from-currency").innerText = "Algo"
     }
     else {
       asset_name2 = "Algo";
       zerosOut = 1000000;
-      let asaname = (asset_id2 === 0) ? "" : asset_id2;
-      document.getElementById("to-currency").innerText = asaname + " " + "Algo"
+      document.getElementById("to-currency").innerText = "Algo"
     }
   }
 }
@@ -524,7 +517,6 @@ function convertInput() {
 
 getZeros(asset_id, true);
 getZeros(asset_id2, false);
-//prepareSig();
 handleChange();
 
 var txid = ""
@@ -565,15 +557,10 @@ async function connect2() {
     user_address = data[0].address
     document.getElementById("snoopy").innerText = user_address
   })
-  //const addresses = accounts.map(account => account.address);
 }
 
 function handleChange() {
   document.getElementById("to-amount").value = "";
-
-  // asset_id = parseInt(document.getElementById("input").value);
-  // asset_id2 = parseInt(document.getElementById("output").value);
-  // pool = document.getElementById("pool").value;
 
   let slipPercent = document.getElementById("slip").value / 100
 
@@ -587,13 +574,10 @@ function handleChange() {
   getZeros(asset_id, true).then(() => {
     getZeros(asset_id2, false).then(() => {
       getPoolInfo(pool).then(data => {
-        let end = asset_name2;
-        document.getElementById("to-amount").value = " " + ((data / zerosOut) * (1 - slippage)).toFixed(2) + " " + end;
+        document.getElementById("to-amount").value = " " + ((data / zerosOut) * (1 - slippage)).toFixed(2);
       })
     })
   })
 }
-
-//document.getElementById ("pool-readonly").innerText = pool
 //end swap code
 

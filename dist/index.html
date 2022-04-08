@@ -12,7 +12,7 @@
         <span class="fs-5"><strong>Algo</strong>Swap</span>
       </button>
     </div>
-    <div id="firstdiv" style="display: none" class="modal fade">
+    <div id="firstdiv" style="display: none" class="">
       <div class="modal-backdrop fade show"></div>
       <div class="modal-dialog">
         <div class="modal-content-2">
@@ -42,7 +42,7 @@
                   <div class="modal-footer">
                     <div class="dropdown">
                       <select class="form-select form-select-lg" aria-label=".form-select-lg example" id="walletswitch">
-                        <option>myAlgoWallet</option>
+                        <option>MyAlgoWallet</option>
                         <option disabled="">WalletConnect</option>
                         <option disabled="">AlgoSigner</option>
                       </select>
@@ -179,9 +179,15 @@
               </div>
             </div>
           </div>
-        </div>
+          <div id="assetlist" style="display:none">
+            <div class="modal-body" id="sure" p="{4}" pb="{1}">
+              <h3 id="messagioHeadagio">Select Asset</h3>
+            </div>
+            <div id="asset-list"></div>
+          </div>
+        </div>        
       </div>
-    </div>
+    </div>    
     <div class="footer primary"></div>
   </div>
 </div>
