@@ -40755,7 +40755,6 @@ document.getElementById("to-currency").onclick = function () {
 };
 
 function selectAsset(arrow, assetid) {
-  console.log("++++++++++++++", assetid, arrow);
   document.getElementById("assetlist").style.display = "none";
   document.getElementById("sendscreen").style.display = "block";
 
@@ -41086,7 +41085,6 @@ function _getZeros() {
       while (1) {
         switch (_context5.prev = _context5.next) {
           case 0:
-            console.log("++++++++++++++++++++++", index);
             iamount = 1000000;
 
             if (index !== 0) {
@@ -41129,7 +41127,7 @@ function _getZeros() {
               }
             }
 
-          case 3:
+          case 2:
           case "end":
             return _context5.stop();
         }
@@ -41251,7 +41249,7 @@ function handleChange() {
   getZeros(asset_id, true).then(function () {
     getZeros(asset_id2, false).then(function () {
       getPoolInfo(pool).then(function (data) {
-        document.getElementById("to-amount").value = " " + (data / zerosOut * (1 - slippage)).toFixed(2);
+        document.getElementById("to-amount").value = (data / zerosOut * (1 - slippage)).toFixed(2);
       });
     });
   });
@@ -41284,7 +41282,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43657" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35473" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -142,7 +142,6 @@ document.getElementById("from-currency").onclick = () => showAssetList("from");
 document.getElementById("to-currency").onclick = () => showAssetList("to");
 
 function selectAsset(arrow, assetid) {
-  console.log("++++++++++++++", assetid, arrow);
   document.getElementById("assetlist").style.display = "none";
   document.getElementById("sendscreen").style.display = "block";
 
@@ -459,7 +458,6 @@ function _base64ToArrayBuffer(base64) {
 }
 
 async function getZeros(index, isInput) {
-  console.log("++++++++++++++++++++++", index);
   let iamount = 1000000;
   if (index !== 0) {
     let url2 = "https://algoexplorerapi.io/idx2/v2/assets/" + index;
@@ -523,8 +521,8 @@ var txid = ""
 
 document.getElementById("slip").onchange = () => handleChange();
 document.getElementById("swapbutton").onclick = () => swap();
-
 document.getElementById("from-amount").onkeyup = () => changeAmount();
+
 function changeAmount() {
   amount = parseInt(document.getElementById("from-amount").value * zerosIN);
   handleChange();
@@ -574,7 +572,7 @@ function handleChange() {
   getZeros(asset_id, true).then(() => {
     getZeros(asset_id2, false).then(() => {
       getPoolInfo(pool).then(data => {
-        document.getElementById("to-amount").value = " " + ((data / zerosOut) * (1 - slippage)).toFixed(2);
+        document.getElementById("to-amount").value = ((data / zerosOut) * (1 - slippage)).toFixed(2);
       })
     })
   })
