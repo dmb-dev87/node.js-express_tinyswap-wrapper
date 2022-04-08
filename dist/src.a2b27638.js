@@ -38699,7 +38699,7 @@ document.getElementById("swapbutton").onclick = function () {
   return swap();
 };
 
-document.getElementById("from-amount").onchange = function () {
+document.getElementById("from-amount").onkeyup = function () {
   return changeAmount();
 };
 
@@ -38762,9 +38762,9 @@ function _connect2() {
 }
 
 function handleChange() {
-  document.getElementById("to-amount").innerText = ""; //asset_id = parseInt(document.getElementById("input").value);
-  //asset_id2 = parseInt(document.getElementById("output").value);
-  //pool = document.getElementById("pool").value;
+  document.getElementById("to-amount").value = ""; // asset_id = parseInt(document.getElementById("input").value);
+  // asset_id2 = parseInt(document.getElementById("output").value);
+  // pool = document.getElementById("pool").value;
 
   var slipPercent = document.getElementById("slip").value / 100;
   slippage = slipPercent;
@@ -38776,12 +38776,11 @@ function handleChange() {
     inputIsAlgo = false;
   }
 
-  console.log("++++++++++++++++++++++++", slippage);
   getZeros(asset_id, true).then(function () {
     getZeros(asset_id2, false).then(function () {
       getPoolInfo(pool).then(function (data) {
         var end = asset_name2;
-        document.getElementById("to-amount").innerText = " " + (data / zerosOut * (1 - slippage)).toFixed(2) + " " + end;
+        document.getElementById("to-amount").value = " " + (data / zerosOut * (1 - slippage)).toFixed(2) + " " + end;
       });
     });
   });
@@ -38815,7 +38814,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39359" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44839" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

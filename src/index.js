@@ -532,7 +532,7 @@ var txid = ""
 document.getElementById("slip").onchange = () => handleChange();
 document.getElementById("swapbutton").onclick = () => swap();
 
-document.getElementById("from-amount").onchange = () => changeAmount();
+document.getElementById("from-amount").onkeyup = () => changeAmount();
 function changeAmount() {
   amount = parseInt(document.getElementById("from-amount").value * zerosIN);
   handleChange();
@@ -569,12 +569,11 @@ async function connect2() {
 }
 
 function handleChange() {
-  document.getElementById("to-amount").innerText = "";
-  //asset_id = parseInt(document.getElementById("input").value);
+  document.getElementById("to-amount").value = "";
 
-  //asset_id2 = parseInt(document.getElementById("output").value);
-
-  //pool = document.getElementById("pool").value;
+  // asset_id = parseInt(document.getElementById("input").value);
+  // asset_id2 = parseInt(document.getElementById("output").value);
+  // pool = document.getElementById("pool").value;
 
   let slipPercent = document.getElementById("slip").value / 100
 
@@ -585,13 +584,11 @@ function handleChange() {
   if (asset_id === 0) { inputIsAlgo = true }
   else { inputIsAlgo = false }
 
-  console.log("++++++++++++++++++++++++", slippage);
-
   getZeros(asset_id, true).then(() => {
     getZeros(asset_id2, false).then(() => {
       getPoolInfo(pool).then(data => {
         let end = asset_name2;
-        document.getElementById("to-amount").innerText = " " + ((data / zerosOut) * (1 - slippage)).toFixed(2) + " " + end;
+        document.getElementById("to-amount").value = " " + ((data / zerosOut) * (1 - slippage)).toFixed(2) + " " + end;
       })
     })
   })
